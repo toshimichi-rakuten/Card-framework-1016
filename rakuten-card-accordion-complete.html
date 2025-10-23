@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>楽天カードフレームワーク - アコーディオン完全版</title>
+  <link rel="stylesheet" href="https://static.card.jp.rakuten-static.com/card_corp/pc/css/common/framework/rakuten-card-framework-4.0.0.min.css">
+  <link rel="stylesheet" href="https://static.card.jp.rakuten-static.com/card_corp/pc/css/common/iconfont/rakuten-card-icon-5.0.0.min.css">
+
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>楽天カードフレームワーク - アコーディオン</h1>
+    
+    <h2>Basic Accordion</h2>
+    <p>アコーディオンをクリックすると、アコーディオンの内容を展開・折りたたむことができます。</p>
+    
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button expanded"
+            type="button"
+            data-toggle="accordion"
+            data-target="#collapseOne"
+            aria-controls="collapseOne"
+            aria-expanded="true"
+          >
+            <span class="accordion-button-text">Accordion Item #1</span>
+            <span class="accordion-button-icon rakuten-card-icon chevron-up"></span>
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse" aria-hidden="false">
+          <div class="accordion-body">
+            <strong>This is the first item's accordion body.</strong> It is hidden
+            by default, until the collapse plugin adds the appropriate classes that
+            we use to style each element. These classes control the overall
+            appearance, as well as the showing and hiding via CSS transitions. You
+            can modify any of this with custom CSS or overriding our default
+            variables. It's also worth noting that just about any HTML can go within
+            the <code>.accordion-body</code>, though the transition does limit
+            overflow.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-toggle="accordion"
+            data-target="#collapseTwo"
+            aria-controls="collapseTwo"
+            aria-expanded="false"
+          >
+            <span class="accordion-button-text">Accordion Item #2</span>
+            <span class="accordion-button-icon rakuten-card-icon chevron-up"></span>
+          </button>
+        </h2>
+        <div
+          id="collapseTwo"
+          class="accordion-collapse collapsed"
+          aria-hidden="true"
+        >
+          <div class="accordion-body">
+            <strong>This is the second item's accordion body.</strong> It is hidden
+            by default, until the collapse plugin adds the appropriate classes that
+            we use to style each element. These classes control the overall
+            appearance, as well as the showing and hiding via CSS transitions. You
+            can modify any of this with custom CSS or overriding our default
+            variables. It's also worth noting that just about any HTML can go within
+            the <code>.accordion-body</code>, though the transition does limit
+            overflow.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button expanded"
+            type="button"
+            data-toggle="accordion"
+            data-target="#collapseThree"
+            aria-controls="collapseThree"
+            aria-expanded="true"
+          >
+            <span class="accordion-button-text">
+              <span class="accordion-title">Accordion Item #3</span>
+              <span class="accordion-subtitle d-block">Accordion subtitle</span>
+            </span>
+            <span class="accordion-button-icon rakuten-card-icon chevron-up"></span>
+          </button>
+        </h2>
+        <div
+          id="collapseThree"
+          class="accordion-collapse expanded"
+          aria-hidden="false"
+        >
+          <div class="accordion-body">
+            <strong>This is the third item's accordion body.</strong> It is hidden
+            by default, until the collapse plugin adds the appropriate classes that
+            we use to style each element. These classes control the overall
+            appearance, as well as the showing and hiding via CSS transitions. You
+            can modify any of this with custom CSS or overriding our default
+            variables. It's also worth noting that just about any HTML can go within
+            the <code>.accordion-body</code>, though the transition does limit
+            overflow.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2>Flush Accordion</h2>
+    <p>アコーディオンをクリックすると、アコーディオンの内容を展開・折りたたむことができます。<br>
+    <code>.accordion-flush</code>を追加することで、デフォルトのいくつかの境界線と角丸を削除したスタイルを実装できます。</p>
+    
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button"
+            type="button"
+            data-toggle="accordion"
+            data-target="#flush-collapseOne"
+            aria-controls="flush-collapseOne"
+            aria-expanded="true"
+          >
+            <span class="accordion-button-text">Accordion Item #1</span>
+            <span class="accordion-button-icon rakuten-card-icon chevron-up"></span>
+          </button>
+        </h2>
+        <div id="flush-collapseOne" class="accordion-collapse" aria-hidden="false">
+          <div class="accordion-body">
+            <strong>This is the first item's accordion body.</strong> It is hidden
+            by default, until the collapse plugin adds the appropriate classes that
+            we use to style each element. These classes control the overall
+            appearance, as well as the showing and hiding via CSS transitions. You
+            can modify any of this with custom CSS or overriding our default
+            variables. It's also worth noting that just about any HTML can go within
+            the <code>.accordion-body</code>, though the transition does limit
+            overflow.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-toggle="accordion"
+            data-target="#flush-collapseTwo"
+            aria-controls="flush-collapseTwo"
+            aria-expanded="false"
+          >
+            <span class="accordion-button-text">Accordion Item #2</span>
+            <span class="accordion-button-icon rakuten-card-icon chevron-up"></span>
+          </button>
+        </h2>
+        <div
+          id="flush-collapseTwo"
+          class="accordion-collapse collapsed"
+          aria-hidden="true"
+        >
+          <div class="accordion-body">
+            <strong>This is the second item's accordion body.</strong> It is hidden
+            by default, until the collapse plugin adds the appropriate classes that
+            we use to style each element. These classes control the overall
+            appearance, as well as the showing and hiding via CSS transitions. You
+            can modify any of this with custom CSS or overriding our default
+            variables. It's also worth noting that just about any HTML can go within
+            the <code>.accordion-body</code>, though the transition does limit
+            overflow.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button expanded"
+            type="button"
+            data-toggle="accordion"
+            data-target="#flush-collapseThree"
+            aria-controls="flush-collapseThree"
+            aria-expanded="true"
+          >
+            <span class="accordion-button-text">
+              <span class="accordion-title">Accordion Item #3</span>
+              <span class="accordion-subtitle">Accordion subtitle</span>
+            </span>
+            <span class="accordion-button-icon rakuten-card-icon chevron-up"></span>
+          </button>
+        </h2>
+        <div
+          id="flush-collapseThree"
+          class="accordion-collapse expanded"
+          aria-hidden="false"
+        >
+          <div class="accordion-body">
+            <strong>This is the third item's accordion body.</strong> It is hidden
+            by default, until the collapse plugin adds the appropriate classes that
+            we use to style each element. These classes control the overall
+            appearance, as well as the showing and hiding via CSS transitions. You
+            can modify any of this with custom CSS or overriding our default
+            variables. It's also worth noting that just about any HTML can go within
+            the <code>.accordion-body</code>, though the transition does limit
+            overflow.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 楽天カードフレームワーク Accordion JavaScript -->
+  <script src="https://static.card.jp.rakuten-static.com/card_corp/pc/js/common/framework/5.0.0/accordion.min.js"></script>
+</body>
+</html>

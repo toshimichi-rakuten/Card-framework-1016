@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>楽天カードフレームワーク - HalfModal完全版</title>
+  <link rel="stylesheet" href="https://static.card.jp.rakuten-static.com/card_corp/pc/css/common/framework/rakuten-card-framework-4.0.0.min.css">
+  <link rel="stylesheet" href="https://static.card.jp.rakuten-static.com/card_corp/pc/css/common/iconfont/rakuten-card-icon-5.0.0.min.css">
+
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>楽天カードフレームワーク - HalfModal</h1>
+
+    <section>
+      <h2>Default HalfModal</h2>
+      <p>基本的なハーフモーダルです。適切なアクセシビリティ属性が設定されています。</p>
+
+      <div>
+        <div class="text-center">
+          <button class="js-half-modal-open btn btn-primary w-100" data-target-modal="#sample-half-modal">モーダルを表示</button>
+        </div>
+        <div id="sample-half-modal" class="js-half-modal design-system-half-modal" data-modal-speed="250" data-bg-close="true">
+          <div class="js-half-modal-bg design-system-half-modal__bg"></div>
+          <div class="js-half-modal-content design-system-half-modal__content" role="dialog" aria-modal="true" aria-labelledby="sample-title1">
+            <div class="design-system-half-modal__main">
+              <div class="design-system-half-modal__header">
+                <p id="sample-title1" class="design-system-half-modal__title">タイトルタイトルタイトルタイ</p>
+                <button type="button" class="js-half-modal-close design-system-half-modal__close" aria-label="close Modal"></button>
+              </div>
+              <div class="design-system-half-modal__inner">
+                <p class="mb-0">
+                  テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                </p>
+              </div>
+              <div class="design-system-half-modal__footer text-center">
+                <div class="design-system-half-modal__btn-wrapper">
+                  <button type="button" class="design-system-half-modal__btn btn btn-outline-secondary">ボタン</button>
+                  <button type="button" class="design-system-half-modal__btn btn btn-primary">ボタン</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Header/Footer Fixed HalfModal</h2>
+      <p>ヘッダーとフッターが固定されたハーフモーダルです。背景クリックが無効化されています。</p>
+
+      <div class="mt-5">
+        <div class="text-center">
+          <button class="js-half-modal-open btn btn-primary w-100" data-target-modal="#sample-half-modal--fixed">モーダルを表示(ヘッダーフッター固定)</button>
+        </div>
+        <div id="sample-half-modal--fixed" class="js-half-modal design-system-half-modal" data-modal-speed="250" data-bg-close="false">
+          <div class="js-half-modal-bg design-system-half-modal__bg"></div>
+          <div class="js-half-modal-content design-system-half-modal__content" role="dialog" aria-modal="true" aria-labelledby="sample-title2">
+            <div class="design-system-half-modal__header">
+              <p id="sample-title2" class="design-system-half-modal__title">タイトルタイトルタイトルタイ</p>
+              <button type="button" class="js-half-modal-close design-system-half-modal__close" aria-label="close Modal"></button>
+            </div>
+            <div class="design-system-half-modal__main">
+              <div class="design-system-half-modal__inner">
+                <p class="mb-0">
+                  テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                </p>
+              </div>
+            </div>
+            <div class="design-system-half-modal__footer text-center">
+              <div class="design-system-half-modal__btn-wrapper flex-wrap">
+                <button type="button" class="design-system-half-modal__btn btn btn-primary w-100">ボタン縦並び</button>
+                <button type="button" class="design-system-half-modal__btn btn btn-outline-secondary w-100">ボタン縦並び</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>No Scroll HalfModal</h2>
+      <p>スクロールなしの短いハーフモーダルです。</p>
+
+      <div class="mt-5">
+        <div class="text-center">
+          <button class="js-half-modal-open btn btn-primary w-100" data-target-modal="#sample-half-modal--nonscroll">モーダルを表示(スクロールなし)</button>
+        </div>
+        <div id="sample-half-modal--nonscroll" class="js-half-modal design-system-half-modal" data-modal-speed="250" data-bg-close="true">
+          <div class="js-half-modal-bg design-system-half-modal__bg"></div>
+          <div class="js-half-modal-content design-system-half-modal__content" role="dialog" aria-modal="true" aria-labelledby="sample-title3">
+            <div class="design-system-half-modal__header">
+              <p id="sample-title3" class="design-system-half-modal__title">タイトルタイトルタイトルタイ</p>
+              <button type="button" class="js-half-modal-close design-system-half-modal__close" aria-label="close Modal"></button>
+            </div>
+            <div class="design-system-half-modal__main">
+              <div class="design-system-half-modal__inner">
+                <p class="mb-0">
+                  テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                </p>
+              </div>
+              <div class="design-system-half-modal__footer text-center">
+                <div class="design-system-half-modal__btn-wrapper">
+                  <button type="button" class="design-system-half-modal__btn btn btn-outline-secondary">ボタン</button>
+                  <button type="button" class="design-system-half-modal__btn btn btn-primary">ボタン</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Options Example</h2>
+      <p>オプション設定の例です。</p>
+
+      <div class="mt-5">
+        <div class="text-center">
+          <button class="js-half-modal-open btn btn-secondary w-100" data-target-modal="#sample-half-modal--options">オプション付きモーダル</button>
+        </div>
+        <div id="sample-half-modal--options" class="js-half-modal design-system-half-modal" data-modal-speed="500" data-bg-close="false">
+          <div class="js-half-modal-bg design-system-half-modal__bg"></div>
+          <div class="js-half-modal-content design-system-half-modal__content" role="dialog" aria-modal="true" aria-labelledby="sample-title4">
+            <div class="design-system-half-modal__main">
+              <div class="design-system-half-modal__header">
+                <p id="sample-title4" class="design-system-half-modal__title">オプション設定例</p>
+                <button type="button" class="js-half-modal-close design-system-half-modal__close" aria-label="close Modal"></button>
+              </div>
+              <div class="design-system-half-modal__inner">
+                <p class="mb-3">このモーダルは以下のオプションが設定されています：</p>
+                <ul>
+                  <li>data-modal-speed="500" - 開閉速度500ms</li>
+                  <li>data-bg-close="false" - 背景クリック無効</li>
+                </ul>
+                <p class="mb-0">背景をクリックしても閉じません。閉じるボタンまたはEscapeキーで閉じてください。</p>
+              </div>
+              <div class="design-system-half-modal__footer text-center">
+                <div class="design-system-half-modal__btn-wrapper">
+                  <button type="button" class="js-half-modal-close design-system-half-modal__btn btn btn-outline-secondary">閉じる</button>
+                  <button type="button" class="design-system-half-modal__btn btn btn-primary">アクション</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>No Title Modal</h2>
+      <p>タイトルなしのモーダル例（aria-label使用）です。</p>
+
+      <div class="mt-5">
+        <div class="text-center">
+          <button class="js-half-modal-open btn btn-info w-100" data-target-modal="#sample-half-modal--notitle">タイトルなしモーダル</button>
+        </div>
+        <div id="sample-half-modal--notitle" class="js-half-modal design-system-half-modal" data-modal-speed="250" data-bg-close="true">
+          <div class="js-half-modal-bg design-system-half-modal__bg"></div>
+          <div class="js-half-modal-content design-system-half-modal__content" role="dialog" aria-modal="true" aria-label="確認メッセージモーダル">
+            <div class="design-system-half-modal__main">
+              <div class="design-system-half-modal__header">
+                <button type="button" class="js-half-modal-close design-system-half-modal__close" aria-label="close Modal"></button>
+              </div>
+              <div class="design-system-half-modal__inner">
+                <p class="mb-0 text-center">
+                  タイトルがないモーダルの例です。<br>
+                  aria-label属性でスクリーンリーダーにモーダルの内容を説明しています。
+                </p>
+              </div>
+              <div class="design-system-half-modal__footer text-center">
+                <div class="design-system-half-modal__btn-wrapper">
+                  <button type="button" class="js-half-modal-close design-system-half-modal__btn btn btn-outline-secondary">キャンセル</button>
+                  <button type="button" class="design-system-half-modal__btn btn btn-primary">確認</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Accessibility Information</h2>
+      <p>ハーフモーダルのアクセシビリティ機能について</p>
+      
+      <div class="alert alert-info">
+        <h5>実装済みのアクセシビリティ機能</h5>
+        <ul class="mb-0">
+          <li>Escapeキーでモーダルを閉じることができます</li>
+          <li>モーダル開閉時の適切なフォーカス制御</li>
+          <li>Tabキーでの選択がモーダル内に制限されます</li>
+          <li>適切なARIA属性（role="dialog", aria-modal="true"等）</li>
+          <li>スクリーンリーダー対応のラベル設定</li>
+          <li>必須の閉じるボタンがtabbable要素として実装</li>
+        </ul>
+      </div>
+
+      <div class="alert alert-warning mt-3">
+        <h5>⚠️ バージョン変更時の注意事項</h5>
+        <p class="mb-0">
+          <strong>CSS 3.1.0未満 ⇨ それ以降</strong><br>
+          CSS適用クラス名・DOM構造が大幅変更されているため、既存のハーフモーダルの表示が崩れます。
+          デザインシステムCSSのバージョンを変更する際は、必ず最新のDOM構造に更新してください。
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <!-- 楽天カードフレームワーク HalfModal JavaScript -->
+  <script src="https://static.card.jp.rakuten-static.com/card_corp/pc/js/common/framework/5.0.0/half-modal.min.js"></script>
+</body>
+</html>

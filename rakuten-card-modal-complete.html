@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>楽天カードフレームワーク - Modal完全版</title>
+  <link rel="stylesheet" href="https://static.card.jp.rakuten-static.com/card_corp/pc/css/common/framework/rakuten-card-framework-4.0.0.min.css">
+  <link rel="stylesheet" href="https://static.card.jp.rakuten-static.com/card_corp/pc/css/common/iconfont/rakuten-card-icon-5.0.0.min.css">
+
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>楽天カードフレームワーク - Modal</h1>
+
+    <section>
+      <h2>Basic Modal</h2>
+      <p>基本的なモーダルです。適切なアクセシビリティ属性が設定されています。</p>
+
+      <div>
+        <a href="#modal1" class="popup-modal btn btn-primary">モーダルを表示</a>
+        <div id="modal1" class="js-modal-content mfp-hide modal__content" role="dialog" aria-modal="true" aria-labelledby="modal__title1">
+          <div class="modal__content--header border-bottom">
+            <p id="modal__title1" class="mb-0 text-center h4 font-weight-bold">モーダル１</p>
+            <button type="button" aria-label="close Modal" class="js-mfp-close mfp-close modal__close-circle-btn"></button>
+          </div>
+          <div class="modal__content--main">
+            <div class="modal__content--inner">
+              <p class="mb-0">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストトテキストテキストテキストテキストテキストトテキストテキストテキストテキストテキストトテキストテキストテキストテキストテキストトテキストテキストテキストテキストテキスト テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストトテキストテキストテキストテキストテキストトテキストテキストテキストテキストテキストトテキストテキストテキストテキストテキストトテキストテキストテキストテキストテキスト テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+            </div>
+            <div class="modal__content--banner">
+              <img src="https://placehold.jp/630x53.png" alt="" class="w-100" style="height: 53px;">
+            </div>
+            <div class="modal__content--footer">
+              <div class="modal__footer-button-wrapper text-center">
+                <button type="button" class="js-mfp-close mfp-close modal__footer-button btn" aria-label="close Modal">閉じる</button>
+                <a href="" class="modal__footer-button btn btn-primary">テキスト</a>
+              </div>
+            </div>
+            <p class="modal__close-text-link-wrapper text-center">
+              <button type="button" aria-label="閉じる" class="js-mfp-close modal__close-text-link">閉じる</button>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Auto Display Modal</h2>
+      <p>自動表示モーダルです。チェックボックスで一定期間非表示にできます。Cookieによる制御があります。</p>
+
+      <div class="mt-3">
+        <a href="#modal2" class="popup-modal btn btn-primary">モーダルを表示（ボタン固定）</a>
+        <div
+          id="modal2"
+          class="js-modal-content js-auto-disp-mfp mfp-hide modal__content"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="modal__title2"
+        >
+          <button
+            type="button"
+            aria-label="close Modal"
+            class="js-mfp-close mfp-close modal__close-circle-btn"
+          ></button>
+          <div class="modal__content--header border-bottom">
+            <p id="modal__title2" class="mb-0 h4 text-center font-weight-bold">
+              モーダル２
+            </p>
+          </div>
+          <div class="border-bottom modal__content--main">
+            <div class="modal__content--inner">
+              <p class="mb-0">
+                テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストトテキストテキストテキストテキストテキストトテキストテキストテキストテキストテキストトテキストテキストテキストテキストテキストトテキストテキストテキストテキストテキスト
+                テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストトテキストテキストテキストテキストテキストトテキストテキストテキストテキストテキストトテキストテキストテキストテキストテキストトテキストテキストテキストテキストテキスト
+                テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストトテキストテキストテキストテキストテキストトテキストテキストテキストテキストテキストトテキストテキストテキストテキストテキストトテキストテキストテキストテキストテキスト
+                テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストトテキストテキストテキストテキストテキストトテキストテキストテキストテキストテキストトテキストテキストテキストテキストテキストトテキストテキストテキストテキストテキスト
+              </p>
+            </div>
+            <div class="modal__content--banner">
+              <img
+                src="https://placehold.jp/630x53.png"
+                alt=""
+                class="w-100"
+                style="height: 53px;"
+              />
+            </div>
+          </div>
+          <div class="modal__content--footer">
+            <div class="modal__footer-button-wrapper text-center">
+              <button
+                type="button"
+                class="js-mfp-close mfp-close modal__footer-button btn"
+                aria-label="close Modal"
+              >
+                閉じる
+              </button>
+              <a href="" class="modal__footer-button btn btn-primary">テキスト</a>
+            </div>
+          </div>
+          <div class="js-mfp-checkbox-wrap">
+            <div
+              class="d-flex position-absolute justify-content-center modal__checkbox"
+            >
+              <input
+                id="sample-checkbox"
+                type="checkbox"
+                class="modal__checkbox-dummy"
+                data-duration="3"
+              />
+              <label for="sample-checkbox" class="modal__checkbox-text">
+                <span class="modal__checkbox-square"></span>
+                次回から表示しない
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>No Scroll Modal</h2>
+      <p>スクロールなしの短いモーダルです。</p>
+
+      <div class="mt-3">
+        <a href="#modal3" class="popup-modal btn btn-primary">
+          モーダルを表示(スクロールなし)
+        </a>
+        <div id="modal3" class="js-modal-content mfp-hide modal__content" role="dialog" aria-modal="true" aria-labelledby="modal__title3">
+          <div class="modal__content--header">
+            <p id="modal__title3" class="mb-0 text-center h4 font-weight-bold">モーダル３</p>
+            <button type="button" aria-label="close Modal" class="js-mfp-close mfp-close modal__close-circle-btn"></button>
+          </div>
+          <div class="modal__content--main">
+            <div class="modal__content--inner">
+              <p class="mb-0">
+                テキストテキストテキストテキストテキストテキストテキストテキストテキステキストテキストテキストテキストテキストテキストテキス
+              </p>
+            </div>
+            <div class="modal__content--banner">
+              <img src="https://placehold.jp/630x53.png" alt="" class="w-100" style="height: 53px;">
+            </div>
+            <div class="modal__content--footer">
+              <div class="modal__footer-button-wrapper text-center">
+                <button type="button" class="js-mfp-close mfp-close modal__footer-button btn" aria-label="close Modal">
+                  閉じる
+                </button>
+                <a href="" class="modal__footer-button btn btn-primary">
+                  テキスト
+                </a>
+              </div>
+            </div>
+            <p class="modal__close-text-link-wrapper text-center">
+              <button type="button" aria-label="閉じる" class="js-mfp-close modal__close-text-link">
+                閉じる
+              </button>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Modal with Options</h2>
+      <p>オプション設定付きのモーダルです。</p>
+
+      <div class="mt-3">
+        <a href="#modal4" class="popup-modal btn btn-primary">
+          オプション付きモーダル
+        </a>
+        <div 
+          id="modal4" 
+          class="js-modal-content mfp-hide modal__content" 
+          role="dialog" 
+          aria-modal="true" 
+          aria-labelledby="modal__title4"
+          data-bg-close="false"
+          data-auto-focus-last="false"
+        >
+          <div class="modal__content--header">
+            <p id="modal__title4" class="mb-0 text-center h4 font-weight-bold">オプション付きモーダル</p>
+            <button type="button" aria-label="close Modal" class="js-mfp-close mfp-close modal__close-circle-btn"></button>
+          </div>
+          <div class="modal__content--main">
+            <div class="modal__content--inner">
+              <p class="mb-3">
+                このモーダルは以下のオプションが設定されています：
+              </p>
+              <ul>
+                <li>data-bg-close="false" - 背景クリックで閉じない</li>
+                <li>data-auto-focus-last="false" - 閉じた時にボタンにフォーカスが戻らない</li>
+              </ul>
+              <p class="mb-0">
+                背景をクリックしても閉じません。閉じるボタンまたはEscapeキーで閉じてください。
+              </p>
+            </div>
+            <div class="modal__content--footer">
+              <div class="modal__footer-button-wrapper text-center">
+                <button type="button" class="js-mfp-close mfp-close modal__footer-button btn" aria-label="close Modal">
+                  閉じる
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Auto Display Only Modal</h2>
+      <p>自動表示専用モーダル（ボタンなし）のサンプルです。実際にはページ読み込み時に自動表示されます。</p>
+      
+      <div class="alert alert-info">
+        <strong>注意:</strong> このモーダルは通常ページ読み込み時に自動表示されますが、Cookie制御により表示されない場合があります。
+      </div>
+
+      <!-- 自動表示専用モーダル（ボタンなし） -->
+      <div
+        id="modal-auto-only"
+        class="js-modal-content js-auto-disp-mfp mfp-hide modal__content"
+        role="dialog"
+        aria-modal="true"
+        aria-label="自動表示専用モーダル"
+      >
+        <button
+          type="button"
+          aria-label="close Modal"
+          class="js-mfp-close mfp-close modal__close-circle-btn"
+        ></button>
+        <div class="modal__content--header border-bottom">
+          <p class="mb-0 h4 text-center font-weight-bold">
+            自動表示モーダル
+          </p>
+        </div>
+        <div class="modal__content--main">
+          <div class="modal__content--inner">
+            <p class="mb-0">
+              このモーダルはページ読み込み時に自動表示されます。Cookie制御により一定期間非表示にできます。
+            </p>
+          </div>
+          <div class="modal__content--footer">
+            <div class="modal__footer-button-wrapper text-center">
+              <button
+                type="button"
+                class="js-mfp-close mfp-close modal__footer-button btn"
+                aria-label="close Modal"
+              >
+                閉じる
+              </button>
+            </div>
+          </div>
+          <div class="js-mfp-checkbox-wrap">
+            <div
+              class="d-flex position-absolute justify-content-center modal__checkbox"
+            >
+              <input
+                id="auto-modal-checkbox"
+                type="checkbox"
+                class="modal__checkbox-dummy"
+                data-duration="7"
+              />
+              <label for="auto-modal-checkbox" class="modal__checkbox-text">
+                <span class="modal__checkbox-square"></span>
+                次回から表示しない
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Accessibility Information</h2>
+      <p>モーダルのアクセシビリティ機能について</p>
+      
+      <div class="alert alert-info">
+        <h5>実装済みのアクセシビリティ機能</h5>
+        <ul class="mb-0">
+          <li>Escapeキーでモーダルを閉じることができます</li>
+          <li>モーダル開閉時の適切なフォーカス制御</li>
+          <li>Tabキーでの選択がモーダル内に制限されます</li>
+          <li>適切なARIA属性（role="dialog", aria-modal="true"等）</li>
+          <li>スクリーンリーダー対応のラベル設定</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <!-- 楽天カードフレームワーク Modal JavaScript -->
+  <script src="https://static.card.jp.rakuten-static.com/card_corp/pc/js/common/framework/5.0.0/modal.min.js"></script>
+  <script src="https://static.card.jp.rakuten-static.com/card_corp/pc/js/common/framework/5.0.0/magnific-popup.min.js"></script>
+</body>
+</html>

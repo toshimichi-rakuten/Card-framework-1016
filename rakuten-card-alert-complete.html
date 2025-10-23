@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>楽天カードフレームワーク - Alert完全版</title>
+  <link rel="stylesheet" href="https://static.card.jp.rakuten-static.com/card_corp/pc/css/common/framework/rakuten-card-framework-4.0.0.min.css">
+  <link rel="stylesheet" href="https://static.card.jp.rakuten-static.com/card_corp/pc/css/common/iconfont/rakuten-card-icon-5.0.0.min.css">
+
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>楽天カードフレームワーク - Alert</h1>
+
+    <section>
+      <h2>Basic Alert - クリック可能</h2>
+      <p>これらのアラートはクリック可能で、リンクとして機能します。</p>
+
+      <a href="#" class="alert alert-success">
+        <div class="alert-heading">
+          <span class="rakuten-card-icon alert-icon check"></span>
+          <div class="alert-title">これは success のアラートです！</div>
+          <span class="rakuten-card-icon chevron-right alert-icon d-inline-flex align-items-center"></span>
+        </div>
+      </a>
+
+      <a href="#" class="alert alert-danger">
+        <div class="alert-heading">
+          <span class="rakuten-card-icon alert-icon warning-l"></span>
+          <div class="alert-title"><strong>これは danger のアラートです！</strong></div>
+          <span class="rakuten-card-icon chevron-right alert-icon"></span>
+        </div>
+      </a>
+
+      <a href="#" class="alert alert-warning">
+        <div class="alert-heading">
+          <span class="rakuten-card-icon alert-icon info-l"></span>
+          <div class="alert-title"><em>これは warning のアラートです！</em></div>
+          <span class="rakuten-card-icon chevron-right alert-icon"></span>
+        </div>
+      </a>
+
+      <a href="#" class="alert alert-info">
+        <div class="alert-heading">
+          <span class="rakuten-card-icon alert-icon info-l"></span>
+          <div class="alert-title">これは info のアラートです！</div>
+          <span class="rakuten-card-icon chevron-right alert-icon d-inline-flex align-items-center"></span>
+        </div>
+      </a>
+
+      <a href="#" class="alert alert-promotion">
+        <div class="alert-heading">
+          <span class="rakuten-card-icon alert-icon point-l"></span>
+          <div class="alert-title">これは promotion のアラートです！</div>
+          <span class="rakuten-card-icon chevron-right alert-icon d-inline-flex align-items-center"></span>
+        </div>
+      </a>
+
+      <a href="#" class="alert alert-promotion">
+        <div class="alert-heading">
+          <span class="rakuten-card-icon alert-icon campaign-l"></span>
+          <div class="alert-title">これは promotion のアラートです！</div>
+          <span class="rakuten-card-icon chevron-right alert-icon d-inline-flex align-items-center"></span>
+        </div>
+      </a>
+    </section>
+
+    <section>
+      <h2>Basic Alert - リンク有り</h2>
+
+      <div class="alert alert-success">
+        <div class="alert-heading">
+          <span class="rakuten-card-icon warning-l alert-icon"></span>
+          <div class="alert-title font-weight-bold">これは success のアラートリンク有りのパターンです</div>
+        </div>
+        <div class="alert-action text-right">
+          <a href="#" class="d-inline-flex align-items-center">詳細はこちら<span class="rakuten-card-icon chevron-right"></span></a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Basic Alert - 詳細有り</h2>
+
+      <div class="alert alert-success">
+        <div class="alert-heading">
+          <span class="rakuten-card-icon warning-l alert-icon"></span>
+          <div class="alert-title font-weight-bold">これは success のアラート、詳細有りパターンです</div>
+        </div>
+        <div class="alert-body alert-body-padding">
+          これは success のアラート、詳細有りパターンです<a href="#">これは success のアラート内のリンクです</a>これは success のアラート、詳細有りパターンです
+          <br>これは success のアラート、詳細有りパターンです
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Basic Alert - 詳細・リンク有り</h2>
+
+      <div class="alert alert-success">
+        <div class="alert-heading">
+          <span class="rakuten-card-icon warning-l alert-icon"></span>
+          <div class="alert-title font-weight-bold">これは success のアラート、詳細有りパターンです</div>
+        </div>
+        <div class="alert-body alert-body-padding">
+          これは success のアラート、詳細有りパターンです<a href="#">これは success のアラート内のリンクです</a>これは success のアラート、詳細有りパターンです
+          <br>これは success のアラート、詳細有りパターンです
+        </div>
+        <div class="alert-action text-right">
+          <a href="#" class="d-inline-flex align-items-center">詳細はこちら<span class="rakuten-card-icon chevron-right"></span></a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Basic Alert - リスト有り</h2>
+
+      <div class="alert alert-success">
+        <div class="alert-heading">
+          <span class="rakuten-card-icon warning-l alert-icon"></span>
+          <div class="alert-title font-weight-bold">A simple success alert—check it out!</div>
+        </div>
+        <div class="alert-body alert-body-padding">
+          <ul class="mb-0">
+            <li>alertlist</li>
+            <li>alertlist</li>
+            <li>alertlist</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Basic Alert - 全体リンク</h2>
+
+      <a class="alert alert-success alert-box" href="#">
+        <div class="alert-heading"><span class="rakuten-card-icon check"></span>
+          <div class="alert-title"><em>A simple success alert—check it out!</em></div>
+          <span class="rakuten-card-icon chevron-right alert-icon"></span>
+        </div>
+      </a>
+
+      <a class="alert alert-danger alert-box" href="#">
+        <div class="alert-heading"><span class="rakuten-card-icon warning-l"></span>
+          <div class="alert-title"><em>A simple danger alert—check it out!</em></div>
+          <span class="rakuten-card-icon chevron-right alert-icon"></span>
+        </div>
+      </a>
+
+      <a class="alert alert-warning alert-box" href="#">
+        <div class="alert-heading"><span class="rakuten-card-icon info-l"></span>
+          <div class="alert-title"><em>A simple warning alert—check it out!</em></div>
+          <span class="rakuten-card-icon chevron-right alert-icon"></span>
+        </div>
+      </a>
+
+      <a class="alert alert-info alert-box" href="#">
+        <div class="alert-heading"><span class="rakuten-card-icon info-l"></span>
+          <div class="alert-title"><em>A simple info alert—check it out!</em></div>
+          <span class="rakuten-card-icon chevron-right alert-icon"></span>
+        </div>
+      </a>
+
+      <a class="alert alert-promotion alert-box" href="#">
+        <div class="alert-heading"><span class="rakuten-card-icon point-l"></span>
+          <div class="alert-title"><em>A simple promotion alert—check it out!</em></div>
+          <span class="rakuten-card-icon chevron-right alert-icon"></span>
+        </div>
+      </a>
+
+      <a class="alert alert-promotion alert-box" href="#">
+        <div class="alert-heading"><span class="rakuten-card-icon campaign-l"></span>
+          <div class="alert-title"><em>A simple promotion alert—check it out!</em></div>
+          <span class="rakuten-card-icon chevron-right alert-icon"></span>
+        </div>
+      </a>
+    </section>
+
+    <section>
+      <h2>Openable Alert</h2>
+      <p>開閉可能なアラートです。アコーディオンのJSを使用しています。</p>
+
+      <div class="accordion-alert-item alert-info">
+        <div>
+          <button
+            type="button"
+            data-toggle="accordion"
+            data-target="#collapseAlert"
+            aria-expanded="false"
+            aria-controls="collapseAlert"
+            class="accordion-alert-button alert-info collapsed"
+          >
+            <span class="rakuten-card-icon info-l alert-icon"></span>
+            <div class="alert-title accordion-alert-title font-weight-bold">
+              お知らせのタイトル
+            </div>
+            <span
+              class="accordion-alert-button-icon rakuten-card-icon chevron-up"
+            ></span>
+          </button>
+        </div>
+        <div
+          id="collapseAlert"
+          aria-hidden="true"
+          class="alert-body accordion-alert-body collapsed"
+        >
+          <div class="accordion-alert-body-text">
+            お知らせのテキストお知らせのテキストお知らせのテキストお知らせのテキストお知らせのテキストお知らせのテキストお知らせのテキストお知らせのテキストお知らせのテキスト
+            <div class="text-right mt-1">
+              <a href="#" class="text-underline accordion-alert-body-text-link"
+                >詳細はこちら<span
+                  class="rakuten-card-icon chevron-right ml-half"
+                ></span
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Deletable Alert</h2>
+      <p>ユーザーが意図して削除できるアラートです。削除後、再表示のタイミングはcookieで制御しています。</p>
+
+      <div
+        id="hide_a"
+        class="alert alert-promotion alert-delete js-hide-alert"
+        data-duration="2"
+      >
+        <button class="alert-delete__btn js-hide-alert-botton">
+          <div class="alert-delete__btn--contents"></div>
+        </button>
+        <div class="alert-heading">
+          <span class="rakuten-card-icon point-l alert-icon"></span>
+          <div class="alert-title">
+            これは promotion のアラート削除機能付きのパターンです！
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- 楽天カードフレームワーク JavaScript -->
+  <script src="https://static.card.jp.rakuten-static.com/card_corp/pc/js/common/framework/5.0.0/alert.min.js"></script>
+  <script src="https://static.card.jp.rakuten-static.com/card_corp/pc/js/common/framework/5.0.0/accordion.min.js"></script>
+</body>
+</html>

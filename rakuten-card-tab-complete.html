@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>楽天カードフレームワーク Tab コンポーネント</title>
+  <link rel="stylesheet" href="https://static.card.jp.rakuten-static.com/card_corp/pc/css/common/framework/rakuten-card-framework-4.0.0.min.css">
+  <link rel="stylesheet" href="https://static.card.jp.rakuten-static.com/card_corp/pc/css/common/iconfont/rakuten-card-icon-5.0.0.min.css">
+</head>
+<body>
+  <div class="container my-5">
+    <h1>楽天カードフレームワーク Tab コンポーネント</h1>
+    <p>楽天カードフレームワークのTabコンポーネントの全バリエーションを示すデモページです。</p>
+
+    <!-- Basic Tab (Bordered) - Version 1.9.0以前 -->
+    <section class="mb-5">
+      <h2>Basic Tab - Bordered (Version 1.9.0以前)</h2>
+      <div class="mb-3">
+        <ul class="tab tab-bordered" data-target="#example-fill-legacy">
+          <li class="tab-bordered-item flex-fill active">
+            <a data-toggle="tab" href="#example-fill-item1-legacy">Tab1</a>
+          </li>
+          <li class="tab-bordered-item flex-fill">
+            <a data-toggle="tab" href="#example-fill-item2-legacy">Tab2</a>
+          </li>
+        </ul>
+        <div id="example-fill-legacy" class="tab-bordered-content">
+          <div class="tab-bordered-content-item active" id="example-fill-item1-legacy">
+            Tab1 Content
+          </div>
+          <div class="tab-bordered-content-item" id="example-fill-item2-legacy">
+            Tab2 Content
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <ul class="tab tab-bordered" data-target="#example-fill-three-legacy">
+          <li class="tab-bordered-item flex-fill active">
+            <a data-toggle="tab" href="#example-fill-item1-three-legacy" class="px-1">Tab-Longtitle1</a>
+          </li>
+          <li class="tab-bordered-item flex-fill">
+            <a data-toggle="tab" href="#example-fill-item2-three-legacy" class="px-1">Tab-Longtitle2</a>
+          </li>
+          <li class="tab-bordered-item flex-fill">
+            <a data-toggle="tab" href="#example-fill-item3-three-legacy" class="px-1">Tab-Longtitle3</a>
+          </li>
+        </ul>
+        <div id="example-fill-three-legacy" class="tab-bordered-content">
+          <div class="tab-bordered-content-item active" id="example-fill-item1-three-legacy">
+            Tab1 Content
+          </div>
+          <div class="tab-bordered-content-item" id="example-fill-item2-three-legacy">
+            Tab2 Content
+          </div>
+          <div class="tab-bordered-content-item" id="example-fill-item3-three-legacy">
+            Tab3 Content
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Basic Tab (Bordered) - Version 2.0.0以降 -->
+    <section class="mb-5">
+      <h2>Basic Tab - Bordered (Version 2.0.0以降)</h2>
+      <div class="mb-3">
+        <div class="js-tab-container">
+          <div role="tablist" class="tab-bordered-a11y">
+            <button
+              role="tab"
+              class="js-tab-button tab-bordered-a11y-item flex-fill"
+              id="tab1"
+              aria-controls="tabpanel1"
+            >
+              Tab 1
+            </button>
+            <button
+              role="tab"
+              class="js-tab-button tab-bordered-a11y-item flex-fill"
+              id="tab2"
+              aria-controls="tabpanel2"
+            >
+              Tab 2
+            </button>
+            <button
+              role="tab"
+              class="js-tab-button tab-bordered-a11y-item flex-fill"
+              id="tab3"
+              aria-controls="tabpanel3"
+            >
+              Tab 3
+            </button>
+          </div>
+          <div id="tabpanel1" role="tabpanel" aria-labelledby="tab1">tabpanel 1</div>
+          <div id="tabpanel2" role="tabpanel" aria-labelledby="tab2">tabpanel 2</div>
+          <div id="tabpanel3" role="tabpanel" aria-labelledby="tab3">tabpanel 3</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Basic Tab (Bordered) - Version 5.0.0以降 (アニメーション付き) -->
+    <section class="mb-5">
+      <h2>Basic Tab - Bordered (Version 5.0.0以降 - アニメーション付き)</h2>
+      <div class="mb-3">
+        <div class="js-tab-container js-tab-container--animation">
+          <div role="tablist" class="tab-bordered-a11y tab-a11y--animation">
+            <button role="tab" id="animation-tab1" aria-controls="animation-tabpanel1" class="js-tab-button tab-bordered-a11y-item flex-fill" aria-selected="false" tabindex="-1">Tab 1</button>
+            <button role="tab" id="animation-tab2" aria-controls="animation-tabpanel2" class="js-tab-button tab-bordered-a11y-item flex-fill" aria-selected="false" tabindex="-1">Tab 2</button>
+            <button role="tab" id="animation-tab3" aria-controls="animation-tabpanel3" class="js-tab-button tab-bordered-a11y-item flex-fill" aria-selected="true" tabindex="0">Tab 3</button>
+          </div>
+          <div id="animation-tabpanel1" role="tabpanel" aria-labelledby="animation-tab1" tabindex="-1" hidden="">tabpanel 1</div>
+          <div id="animation-tabpanel2" role="tabpanel" aria-labelledby="animation-tab2" tabindex="-1" hidden="">tabpanel 2</div>
+          <div id="animation-tabpanel3" role="tabpanel" aria-labelledby="animation-tab3" tabindex="0">tabpanel 3</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Background Tab - Version 1.9.0以前 -->
+    <section class="mb-5">
+      <h2>Background Tab (Version 1.9.0以前)</h2>
+      <div class="mb-3">
+        <ul class="tab tab-background" data-target="#example-background-legacy">
+          <li class="tab-background-item flex-fill active">
+            <a data-toggle="tab" href="#example-background-item1-legacy">Tab1</a>
+          </li>
+          <li class="tab-background-item flex-fill">
+            <a data-toggle="tab" href="#example-background-item2-legacy">Tab2</a>
+          </li>
+          <li class="tab-background-item flex-fill">
+            <a data-toggle="tab" href="#example-background-item3-legacy">Tab3</a>
+          </li>
+        </ul>
+        <div id="example-background-legacy" class="tab-background-content">
+          <div class="tab-background-content-item active" id="example-background-item1-legacy">
+            Tab1 Content
+          </div>
+          <div class="tab-background-content-item" id="example-background-item2-legacy">
+            Tab2 Content
+          </div>
+          <div class="tab-background-content-item" id="example-background-item3-legacy">
+            Tab3 Content
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Background Tab - Version 2.0.0以降 -->
+    <section class="mb-5">
+      <h2>Background Tab (Version 2.0.0以降)</h2>
+      <div class="mb-3">
+        <div class="js-tab-container">
+          <div role="tablist" class="tab-background-a11y">
+            <button role="tab" class="js-tab-button tab-background-a11y-item flex-fill" id="tab-background-1" aria-controls="tabpanel-background-1">Tab 1</button>
+            <button role="tab" class="js-tab-button tab-background-a11y-item flex-fill defaultActive" id="tab-background-2" aria-controls="tabpanel-background-2">Tab 2</button>
+            <button role="tab" class="js-tab-button tab-background-a11y-item flex-fill" id="tab-background-3" aria-controls="tabpanel-background-3">Tab 3</button>
+          </div>
+          <div id="tabpanel-background-1" class="tab-background-a11y-content-item" role="tabpanel" aria-labelledby="tab-background-1">tabpanel 1</div>
+          <div id="tabpanel-background-2" class="tab-background-a11y-content-item" role="tabpanel" aria-labelledby="tab-background-2">tabpanel 2</div>
+          <div id="tabpanel-background-3" class="tab-background-a11y-content-item" role="tabpanel" aria-labelledby="tab-background-3">tabpanel 3</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Background Tab - Version 5.0.0以降 (アニメーション付き) -->
+    <section class="mb-5">
+      <h2>Background Tab (Version 5.0.0以降 - アニメーション付き)</h2>
+      <div class="mb-3">
+        <div class="js-tab-container js-tab-container--animation">
+          <div role="tablist" class="tab-background-a11y tab-a11y--animation">
+            <button role="tab" id="animation-tab-background-1" aria-controls="animation-tabpanel-background-1" class="js-tab-button tab-background-a11y-item flex-fill" aria-selected="false" tabindex="-1">Tab 1</button>
+            <button role="tab" id="animation-tab-background-2" aria-controls="animation-tabpanel-background-2" class="js-tab-button tab-background-a11y-item flex-fill" aria-selected="true" tabindex="0">Tab 2</button>
+            <button role="tab" id="animation-tab-background-3" aria-controls="animation-tabpanel-background-3" class="js-tab-button tab-background-a11y-item flex-fill" aria-selected="false" tabindex="-1">Tab 3</button>
+          </div>
+          <div id="animation-tabpanel-background-1" role="tabpanel" aria-labelledby="animation-tab-background-1" class="tab-background-a11y-content-item" tabindex="-1" hidden="">tabpanel 1</div>
+          <div id="animation-tabpanel-background-2" role="tabpanel" aria-labelledby="animation-tab-background-2" class="tab-background-a11y-content-item" tabindex="0">tabpanel 2</div>
+          <div id="animation-tabpanel-background-3" role="tabpanel" aria-labelledby="animation-tab-background-3" class="tab-background-a11y-content-item" tabindex="-1" hidden="">tabpanel 3</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Border Tab - Version 1.9.0以前 -->
+    <section class="mb-5">
+      <h2>Border Tab with Icons (Version 1.9.0以前)</h2>
+      <div class="mb-3">
+        <ul class="tab tab-background" data-target="#example-border-legacy">
+          <li class="tab-background-item flex-fill active">
+            <a data-toggle="tab" href="#example-border-item1-legacy"><span class="rakuten-card-icon point-l text-xlarge mr-1"></span>Tab1</a>
+          </li>
+          <li class="tab-background-item flex-fill">
+            <a data-toggle="tab" href="#example-border-item2-legacy"><span class="rakuten-card-icon point-l text-xlarge mr-1"></span>Tab2</a>
+          </li>
+          <li class="tab-background-item flex-fill">
+            <a data-toggle="tab" href="#example-border-item3-legacy"><span class="rakuten-card-icon point-l text-xlarge mr-1"></span>Tab3</a>
+          </li>
+        </ul>
+        <div id="example-border-legacy" class="tab-background-content">
+          <div class="tab-background-content-item active" id="example-border-item1-legacy">
+            Tab1 Content
+          </div>
+          <div class="tab-background-content-item" id="example-border-item2-legacy">
+            Tab2 Content
+          </div>
+          <div class="tab-background-content-item" id="example-border-item3-legacy">
+            Tab3 Content
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Border Tab - Version 2.0.0以降 -->
+    <section class="mb-5">
+      <h2>Border Tab (Version 2.0.0以降)</h2>
+      <div class="mb-3">
+        <div class="js-tab-container tab-border">
+          <div role="tablist" class="tab-background-a11y">
+            <button role="tab" class="js-tab-button tab-background-a11y-item flex-fill" id="tab-border-1" aria-controls="tabpanel-border-1">Tab 1</button>
+            <button role="tab" class="js-tab-button tab-background-a11y-item flex-fill" id="tab-border-2" aria-controls="tabpanel-border-2">Tab 2</button>
+            <button role="tab" class="js-tab-button tab-background-a11y-item flex-fill" id="tab-border-3" aria-controls="tabpanel-border-3">Tab 3</button>
+          </div>
+          <div id="tabpanel-border-1" class="tab-background-a11y-content-item" role="tabpanel" aria-labelledby="tab-border-1">tabpanel 1</div>
+          <div id="tabpanel-border-2" class="tab-background-a11y-content-item" role="tabpanel" aria-labelledby="tab-border-2">tabpanel 2</div>
+          <div id="tabpanel-border-3" class="tab-background-a11y-content-item" role="tabpanel" aria-labelledby="tab-border-3">tabpanel 3</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Border Tab - Version 5.0.0以降 (アニメーション付き) -->
+    <section class="mb-5">
+      <h2>Border Tab (Version 5.0.0以降 - アニメーション付き)</h2>
+      <div class="mb-3">
+        <div class="js-tab-container js-tab-container--animation tab-border">
+          <div role="tablist" class="tab-background-a11y tab-a11y--animation">
+            <button role="tab" id="animation-tab-border-1" aria-controls="animation-tabpanel-border-1" class="js-tab-button tab-background-a11y-item flex-fill" aria-selected="true" tabindex="0">Tab 1</button>
+            <button role="tab" id="animation-tab-border-2" aria-controls="animation-tabpanel-border-2" class="js-tab-button tab-background-a11y-item flex-fill" aria-selected="false" tabindex="-1">Tab 2</button>
+            <button role="tab" id="animation-tab-border-3" aria-controls="animation-tabpanel-border-3" class="js-tab-button tab-background-a11y-item flex-fill" aria-selected="false" tabindex="-1">Tab 3</button>
+          </div>
+          <div id="animation-tabpanel-border-1" role="tabpanel" aria-labelledby="animation-tab-border-1" class="tab-background-a11y-content-item" tabindex="0">tabpanel 1</div>
+          <div id="animation-tabpanel-border-2" role="tabpanel" aria-labelledby="animation-tab-border-2" class="tab-background-a11y-content-item" tabindex="-1" hidden="">tabpanel 2</div>
+          <div id="animation-tabpanel-border-3" role="tabpanel" aria-labelledby="animation-tab-border-3" class="tab-background-a11y-content-item" tabindex="-1" hidden="">tabpanel 3</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Round Tab - Version 1.9.0以前 -->
+    <section class="mb-5">
+      <h2>Round Tab (Version 1.9.0以前)</h2>
+      <div class="mb-3">
+        <ul class="tab tab-round" data-target="#example-round-legacy">
+          <li class="tab-round-item active">
+            <a data-toggle="tab" href="#example-round-item1-legacy">Tab1</a>
+          </li>
+          <li class="tab-round-item">
+            <a data-toggle="tab" href="#example-round-item2-legacy">Tab2</a>
+          </li>
+          <li class="tab-round-item">
+            <a data-toggle="tab" href="#example-round-item3-legacy">Tab3</a>
+          </li>
+        </ul>
+        <div id="example-round-legacy" class="tab-round-content">
+          <div class="tab-round-content-item active" id="example-round-item1-legacy">
+            Tab1 Content
+          </div>
+          <div class="tab-round-content-item" id="example-round-item2-legacy">
+            Tab2 Content
+          </div>
+          <div class="tab-round-content-item" id="example-round-item3-legacy">
+            Tab3 Content
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Round Tab - Version 2.0.0以降 -->
+    <section class="mb-5">
+      <h2>Round Tab (Version 2.0.0以降)</h2>
+      <div class="mb-3">
+        <div class="js-tab-container">
+          <div role="tablist" class="tab-round-a11y">
+            <button role="tab" class="js-tab-button tab-round-a11y-item" id="tab-round-1" aria-controls="tabpanel-round-1">Tab 1</button>
+            <button role="tab" class="js-tab-button tab-round-a11y-item" id="tab-round-2" aria-controls="tabpanel-round-2">Tab 2</button>
+            <button role="tab" class="js-tab-button tab-round-a11y-item" id="tab-round-3" aria-controls="tabpanel-round-3">Tab 3</button>
+          </div>
+          <div id="tabpanel-round-1" role="tabpanel" aria-labelledby="tab-round-1">tabpanel 1</div>
+          <div id="tabpanel-round-2" role="tabpanel" aria-labelledby="tab-round-2">tabpanel 2</div>
+          <div id="tabpanel-round-3" role="tabpanel" aria-labelledby="tab-round-3">tabpanel 3</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Alignment Tab - Version 1.9.0以前 -->
+    <section class="mb-5">
+      <h2>Alignment Tab (Version 1.9.0以前)</h2>
+      
+      <h3>右寄せ (justify-content-end)</h3>
+      <div class="mb-3">
+        <ul class="tab tab-bordered justify-content-end">
+          <li class="tab-bordered-item active">
+            <a data-toggle="tab" href="">Tab1</a>
+          </li>
+          <li class="tab-bordered-item">
+            <a data-toggle="tab" href="">Tab2</a>
+          </li>
+        </ul>
+      </div>
+
+      <h3>左寄せ (デフォルト)</h3>
+      <div class="mb-3">
+        <ul class="tab tab-background">
+          <li class="tab-background-item active">
+            <a data-toggle="tab" href="">Tab1</a>
+          </li>
+          <li class="tab-background-item">
+            <a data-toggle="tab" href="">Tab2</a>
+          </li>
+        </ul>
+      </div>
+
+      <h3>中央寄せ (justify-content-center)</h3>
+      <div class="mb-3">
+        <ul class="tab tab-background justify-content-center">
+          <li class="tab-background-item active">
+            <a data-toggle="tab" href="">Tab1</a>
+          </li>
+          <li class="tab-background-item">
+            <a data-toggle="tab" href="">Tab2</a>
+          </li>
+        </ul>
+      </div>
+
+      <h3>右寄せ (justify-content-end)</h3>
+      <div class="mb-3">
+        <ul class="tab tab-background justify-content-end">
+          <li class="tab-background-item active">
+            <a data-toggle="tab" href="">Tab1</a>
+          </li>
+          <li class="tab-background-item">
+            <a data-toggle="tab" href="">Tab2</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Alignment Tab - Version 2.0.0以降 -->
+    <section class="mb-5">
+      <h2>Alignment Tab (Version 2.0.0以降)</h2>
+      <div class="mb-3">
+        <div class="js-tab-container">
+          <div role="tablist" class="tab-background-a11y tab-alignment-a11y">
+            <button
+              role="tab"
+              class="js-tab-button tab-background-a11y-item"
+              id="tab-alignment-1"
+              aria-controls="tabpanel-alignment-1"
+            >
+              Tab 1
+            </button>
+            <button
+              role="tab"
+              class="js-tab-button tab-background-a11y-item"
+              id="tab-alignment-2"
+              aria-controls="tabpanel-alignment-2"
+            >
+              Tab 2
+            </button>
+            <button
+              role="tab"
+              class="js-tab-button tab-background-a11y-item"
+              id="tab-alignment-3"
+              aria-controls="tabpanel-alignment-3"
+            >
+              Tab 3
+            </button>
+          </div>
+          <div
+            id="tabpanel-alignment-1"
+            class="tab-background-a11y-content-item"
+            role="tabpanel"
+            aria-labelledby="tab-alignment-1"
+          >
+            tabpanel 1
+          </div>
+          <div
+            id="tabpanel-alignment-2"
+            class="tab-background-a11y-content-item"
+            role="tabpanel"
+            aria-labelledby="tab-alignment-2"
+          >
+            tabpanel 2
+          </div>
+          <div
+            id="tabpanel-alignment-3"
+            class="tab-background-a11y-content-item"
+            role="tabpanel"
+            aria-labelledby="tab-alignment-3"
+          >
+            tabpanel 3
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://static.card.jp.rakuten-static.com/card_corp/pc/js/common/framework/5.0.0/tab.min.js"></script>
+</body>
+</html>

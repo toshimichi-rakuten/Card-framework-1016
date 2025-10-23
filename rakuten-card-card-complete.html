@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>楽天カードフレームワーク - Card完全版</title>
+  <link rel="stylesheet" href="https://static.card.jp.rakuten-static.com/card_corp/pc/css/common/framework/rakuten-card-framework-4.0.0.min.css">
+  <link rel="stylesheet" href="https://static.card.jp.rakuten-static.com/card_corp/pc/css/common/iconfont/rakuten-card-icon-5.0.0.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1>楽天カードフレームワーク - Card</h1>
+
+    <section>
+      <h2>Basic Card</h2>
+      <p>基本的なカードの例です。</p>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card">
+            <img src="https://via.placeholder.com/400x200/e9ecef/495057?text=Image+cap" class="card-img-top">
+            <div class="card-body">
+              <h4 class="card-title">Card title</h4>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary card-link">Go somewhere</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card card-small">
+            <img src="https://via.placeholder.com/400x200/e9ecef/495057?text=Image+cap" class="card-img-top">
+            <div class="card-body">
+              <h4 class="card-title">Card title</h4>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary card-link">Go somewhere</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Content Types</h2>
+      
+      <h3>Body</h3>
+      <p>カードを構築するクラスは.card-bodyです。</p>
+      
+      <div class="card">
+        <div class="card-body">
+          This is some text within a card body.
+        </div>
+      </div>
+
+      <h3>Titles, text, and links</h3>
+      <p>カードタイトル、サブタイトル、リンクの使用例です。</p>
+      
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title">Card title</h3>
+          <h4 class="card-subtitle mb-2 text-muted">Card subtitle</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Image</h2>
+      <p>上部と下部に画像キャップを配置したカードです。</p>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card">
+            <img src="https://via.placeholder.com/400x200/e9ecef/495057?text=Image+cap" class="card-img-top">
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            <img src="https://via.placeholder.com/400x200/e9ecef/495057?text=Image+cap" class="card-img-bottom">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Horizontal</h2>
+      <p>グリッドとユーティリティの組み合わせで水平なカードにできます。</p>
+
+      <div class="card mb-3">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="https://via.placeholder.com/300x200/e9ecef/495057?text=Image" class="card-img-top">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h4 class="card-title">Card title</h4>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <a href="#" class="card-link">Card link</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Image overlays</h2>
+      <p>画像をカードの背景にして、テキストを重ねることができます。</p>
+
+      <div class="card text-white">
+        <img src="https://via.placeholder.com/600x300/6c757d/ffffff?text=Card+image" class="card-img-top">
+        <div class="card-img-overlay">
+          <h3 class="card-title">Card title</h3>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Icon Card</h2>
+      <p>アイコン付きのカードです。</p>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card card-icon">
+            <img src="https://via.placeholder.com/400x200/e9ecef/495057?text=Image+cap" class="card-img-top">
+            <div class="card-body">
+              <div class="card-icon-img">
+                <img src="https://via.placeholder.com/80x80/007bff/ffffff?text=Icon">
+              </div>
+              <h4 class="card-title">Card title</h4>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card card-small card-icon">
+            <img src="https://via.placeholder.com/400x200/e9ecef/495057?text=Image+cap" class="card-img-top">
+            <div class="card-body">
+              <div class="card-icon-img">
+                <img src="https://via.placeholder.com/80x80/007bff/ffffff?text=Icon">
+              </div>
+              <h4 class="card-title">Card title</h4>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Layout</h2>
+      
+      <h3>Card decks</h3>
+      <p>高さと幅が等しいカードデッキです。</p>
+
+      <div class="card-deck">
+        <div class="card">
+          <img src="https://via.placeholder.com/300x200/e9ecef/495057?text=Image+cap" class="card-img-top" alt="...">
+          <div class="card-body d-flex flex-column">
+            <h4 class="card-title">Card title</h4>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <a href="#" class="card-link text-right mt-auto">Card link</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/300x200/e9ecef/495057?text=Image+cap" class="card-img-top" alt="...">
+          <div class="card-body d-flex flex-column">
+            <h4 class="card-title">Card title</h4>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="card-link text-right mt-auto">Card link</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/300x200/e9ecef/495057?text=Image+cap" class="card-img-top" alt="...">
+          <div class="card-body d-flex flex-column">
+            <h4 class="card-title">Card title</h4>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+            <a href="#" class="card-link text-right mt-auto">Card link</a>
+          </div>
+        </div>
+      </div>
+
+      <h3>Card columns</h3>
+      <p>コラムレイアウトでカードを配置します。</p>
+
+      <div class="card-columns">
+        <div class="card">
+          <img src="https://via.placeholder.com/300x200/e9ecef/495057?text=Image+cap" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h4 class="card-title">Card title that wraps to a new line</h4>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+        </div>
+        <div class="card p-3">
+          <blockquote class="blockquote mb-0 card-body">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+            <footer class="blockquote-footer">
+              <small class="text-muted">
+                Someone famous in <cite title="Source Title">Source Title</cite>
+              </small>
+            </footer>
+          </blockquote>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/300x200/e9ecef/495057?text=Image+cap" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h4 class="card-title">Card title</h4>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="card bg-info text-white text-center p-3">
+          <blockquote class="blockquote mb-0">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
+            <footer class="blockquote-footer text-white">
+              <small>
+                Someone famous in <cite title="Source Title">Source Title</cite>
+              </small>
+            </footer>
+          </blockquote>
+        </div>
+        <div class="card text-center">
+          <div class="card-body">
+            <h4 class="card-title">Card title</h4>
+            <p class="card-text">This card has a regular title and short paragraphy of text below it.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/300x250/e9ecef/495057?text=Image" class="card-img" alt="...">
+        </div>
+        <div class="card p-3 text-right">
+          <blockquote class="blockquote mb-0">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+            <footer class="blockquote-footer">
+              <small class="text-muted">
+                Someone famous in <cite title="Source Title">Source Title</cite>
+              </small>
+            </footer>
+          </blockquote>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Card title</h4>
+            <p class="card-text">This is another card with title and supporting text below. This card has some additional content to make it slightly taller overall.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Sizing</h2>
+      <p>グリッドシステムを使ってカードサイズを調整します。</p>
+
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Special title treatment</h4>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Special title treatment</h4>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Header & Footer</h2>
+      <p>ヘッダーとフッター付きのカードです。</p>
+
+      <div class="card text-center">
+        <div class="card-header">
+          Featured
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Special title treatment</h4>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+        <div class="card-footer text-muted">
+          2 days ago
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

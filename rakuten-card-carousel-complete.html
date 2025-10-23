@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>楽天カードフレームワーク - Carousel完全版</title>
+  <link rel="stylesheet" href="https://static.card.jp.rakuten-static.com/card_corp/pc/css/common/framework/rakuten-card-framework-4.0.0.min.css">
+  <link rel="stylesheet" href="https://static.card.jp.rakuten-static.com/card_corp/pc/css/common/iconfont/rakuten-card-icon-5.0.0.min.css">
+
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>楽天カードフレームワーク - Carousel</h1>
+
+    <section>
+      <h2>Basic Carousel</h2>
+      <p>基本的なカルーセルです。</p>
+
+      <div
+        class="carousel"
+        data-toggle="carousel"
+        aria-roledescription="carousel"
+        aria-label="基本カルーセル"
+        aria-live="polite"
+      >
+        <div class="carousel-item" role="group" aria-roledescription="slide">
+          <div style="background: #f8f9fa; padding: 40px; text-align: center; border: 1px solid #dee2e6;">
+            スライド 1
+          </div>
+        </div>
+        <div class="carousel-item" role="group" aria-roledescription="slide">
+          <div style="background: #f8f9fa; padding: 40px; text-align: center; border: 1px solid #dee2e6;">
+            スライド 2
+          </div>
+        </div>
+        <div class="carousel-item" role="group" aria-roledescription="slide">
+          <div style="background: #f8f9fa; padding: 40px; text-align: center; border: 1px solid #dee2e6;">
+            スライド 3
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Dot Carousel</h2>
+      <p>インディケーターとしてドットを表示するカルーセルです。</p>
+
+      <div
+        class="carousel"
+        data-toggle="carousel"
+        data-dots="true"
+        aria-roledescription="carousel"
+        aria-label="Dotカルーセル"
+        aria-live="polite"
+      >
+        <div class="carousel-item" role="group" aria-roledescription="slide">
+          <div style="background: #e3f2fd; padding: 40px; text-align: center; border: 1px solid #90caf9;">
+            ドット付きスライド 1
+          </div>
+        </div>
+        <div class="carousel-item" role="group" aria-roledescription="slide">
+          <div style="background: #e3f2fd; padding: 40px; text-align: center; border: 1px solid #90caf9;">
+            ドット付きスライド 2
+          </div>
+        </div>
+        <div class="carousel-item" role="group" aria-roledescription="slide">
+          <div style="background: #e3f2fd; padding: 40px; text-align: center; border: 1px solid #90caf9;">
+            ドット付きスライド 3
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Arrow Carousel</h2>
+      <p>左右にアローを表示するカルーセルです。</p>
+
+      <div
+        id="carousel-arrow"
+        class="carousel"
+        data-toggle="carousel"
+        data-arrows="true"
+        aria-roledescription="carousel"
+        aria-label="Arrowカルーセル"
+        aria-live="polite"
+      >
+        <div class="carousel-item" role="group" aria-roledescription="slide">
+          <div style="background: #e8f5e8; padding: 40px; text-align: center; border: 1px solid #a5d6a7;">
+            アロー付きスライド 1
+          </div>
+        </div>
+        <div class="carousel-item" role="group" aria-roledescription="slide">
+          <div style="background: #e8f5e8; padding: 40px; text-align: center; border: 1px solid #a5d6a7;">
+            アロー付きスライド 2
+          </div>
+        </div>
+        <div class="carousel-item" role="group" aria-roledescription="slide">
+          <div style="background: #e8f5e8; padding: 40px; text-align: center; border: 1px solid #a5d6a7;">
+            アロー付きスライド 3
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>AutoPlay Carousel</h2>
+      <p>自動再生するカルーセルです。自動再生停止ボタンも含まれています。</p>
+
+      <div
+        id="carousel-autoplay"
+        class="carousel"
+        data-toggle="carousel"
+        data-arrows="true"
+        data-dots="true"
+        data-autoplay="true"
+        data-autoplay-speed="3000"
+        aria-roledescription="carousel"
+        aria-label="AutoPlayカルーセル"
+      >
+        <div class="carousel-item" role="group" aria-roledescription="slide">
+          <div style="background: #fff3e0; padding: 40px; text-align: center; border: 1px solid #ffcc80;">
+            自動再生スライド 1
+          </div>
+        </div>
+        <div class="carousel-item" role="group" aria-roledescription="slide">
+          <div style="background: #fff3e0; padding: 40px; text-align: center; border: 1px solid #ffcc80;">
+            自動再生スライド 2
+          </div>
+        </div>
+        <div class="carousel-item" role="group" aria-roledescription="slide">
+          <div style="background: #fff3e0; padding: 40px; text-align: center; border: 1px solid #ffcc80;">
+            自動再生スライド 3
+          </div>
+        </div>
+      </div>
+      <button
+        class="js-toggle-autoplay carousel-autoplay-button btn btn-secondary mt-2"
+        data-carousel-id="carousel-autoplay"
+        aria-label="自動再生停止ボタン"
+      >
+        自動再生 停止/開始
+      </button>
+    </section>
+
+    <section>
+      <h2>Center Mode Carousel</h2>
+      <p>センターモードのカルーセルです。</p>
+
+      <div
+        class="carousel"
+        data-toggle="carousel"
+        data-dots="true"
+        data-center="true"
+        aria-roledescription="carousel"
+        aria-label="Centerカルーセル"
+        aria-live="polite"
+      >
+        <div class="carousel-item" role="group" aria-roledescription="slide">
+          <div style="background: #fce4ec; padding: 40px; text-align: center; border: 1px solid #f48fb1;">
+            センターモード スライド 1
+          </div>
+        </div>
+        <div class="carousel-item" role="group" aria-roledescription="slide">
+          <div style="background: #fce4ec; padding: 40px; text-align: center; border: 1px solid #f48fb1;">
+            センターモード スライド 2
+          </div>
+        </div>
+        <div class="carousel-item" role="group" aria-roledescription="slide">
+          <div style="background: #fce4ec; padding: 40px; text-align: center; border: 1px solid #f48fb1;">
+            センターモード スライド 3
+          </div>
+        </div>
+        <div class="carousel-item" role="group" aria-roledescription="slide">
+          <div style="background: #fce4ec; padding: 40px; text-align: center; border: 1px solid #f48fb1;">
+            センターモード スライド 4
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Show Multiple Slides Carousel</h2>
+      <p>一度に複数のスライドを表示するカルーセルです。</p>
+
+      <div
+        class="carousel"
+        data-toggle="carousel"
+        data-dots="true"
+        data-show="3"
+        aria-roledescription="carousel"
+        aria-label="ShowSlideカルーセル"
+        aria-live="polite"
+      >
+        <div class="carousel-item" role="group" aria-roledescription="slide">
+          <div style="background: #f3e5f5; padding: 20px; text-align: center; border: 1px solid #ce93d8; margin: 0 5px;">
+            マルチスライド 1
+          </div>
+        </div>
+        <div class="carousel-item" role="group" aria-roledescription="slide">
+          <div style="background: #f3e5f5; padding: 20px; text-align: center; border: 1px solid #ce93d8; margin: 0 5px;">
+            マルチスライド 2
+          </div>
+        </div>
+        <div class="carousel-item" role="group" aria-roledescription="slide">
+          <div style="background: #f3e5f5; padding: 20px; text-align: center; border: 1px solid #ce93d8; margin: 0 5px;">
+            マルチスライド 3
+          </div>
+        </div>
+        <div class="carousel-item" role="group" aria-roledescription="slide">
+          <div style="background: #f3e5f5; padding: 20px; text-align: center; border: 1px solid #ce93d8; margin: 0 5px;">
+            マルチスライド 4
+          </div>
+        </div>
+        <div class="carousel-item" role="group" aria-roledescription="slide">
+          <div style="background: #f3e5f5; padding: 20px; text-align: center; border: 1px solid #ce93d8; margin: 0 5px;">
+            マルチスライド 5
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Scroll Multiple Slides Carousel</h2>
+      <p>複数スライドを一度に送るカルーセルです。</p>
+
+      <div
+        class="carousel"
+        data-toggle="carousel"
+        data-dots="true"
+        data-show="3"
+        data-scroll="2"
+        aria-roledescription="carousel"
+        aria-label="ScrollSlideカルーセル"
+        aria-live="polite"
+      >
+        <div class="carousel-item" role="group" aria-roledescription="slide">
+          <div style="background: #e8eaf6; padding: 20px; text-align: center; border: 1px solid #9fa8da; margin: 0 5px;">
+            スクロールスライド 1
+          </div>
+        </div>
+        <div class="carousel-item" role="group" aria-roledescription="slide">
+          <div style="background: #e8eaf6; padding: 20px; text-align: center; border: 1px solid #9fa8da; margin: 0 5px;">
+            スクロールスライド 2
+          </div>
+        </div>
+        <div class="carousel-item" role="group" aria-roledescription="slide">
+          <div style="background: #e8eaf6; padding: 20px; text-align: center; border: 1px solid #9fa8da; margin: 0 5px;">
+            スクロールスライド 3
+          </div>
+        </div>
+        <div class="carousel-item" role="group" aria-roledescription="slide">
+          <div style="background: #e8eaf6; padding: 20px; text-align: center; border: 1px solid #9fa8da; margin: 0 5px;">
+            スクロールスライド 4
+          </div>
+        </div>
+        <div class="carousel-item" role="group" aria-roledescription="slide">
+          <div style="background: #e8eaf6; padding: 20px; text-align: center; border: 1px solid #9fa8da; margin: 0 5px;">
+            スクロールスライド 5
+          </div>
+        </div>
+        <div class="carousel-item" role="group" aria-roledescription="slide">
+          <div style="background: #e8eaf6; padding: 20px; text-align: center; border: 1px solid #9fa8da; margin: 0 5px;">
+            スクロールスライド 6
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>All Options Combined</h2>
+      <p>全ての機能を組み合わせたカルーセルです。</p>
+
+      <div
+        id="carousel-all-options"
+        class="carousel"
+        data-toggle="carousel"
+        data-arrows="true"
+        data-dots="true"
+        data-autoplay="true"
+        data-autoplay-speed="4000"
+        data-show="2"
+        data-scroll="1"
+        aria-roledescription="carousel"
+        aria-label="全機能カルーセル"
+      >
+        <div class="carousel-item" role="group" aria-roledescription="slide">
+          <div style="background: #e0f2f1; padding: 30px; text-align: center; border: 1px solid #80cbc4; margin: 0 5px;">
+            全機能スライド 1
+          </div>
+        </div>
+        <div class="carousel-item" role="group" aria-roledescription="slide">
+          <div style="background: #e0f2f1; padding: 30px; text-align: center; border: 1px solid #80cbc4; margin: 0 5px;">
+            全機能スライド 2
+          </div>
+        </div>
+        <div class="carousel-item" role="group" aria-roledescription="slide">
+          <div style="background: #e0f2f1; padding: 30px; text-align: center; border: 1px solid #80cbc4; margin: 0 5px;">
+            全機能スライド 3
+          </div>
+        </div>
+        <div class="carousel-item" role="group" aria-roledescription="slide">
+          <div style="background: #e0f2f1; padding: 30px; text-align: center; border: 1px solid #80cbc4; margin: 0 5px;">
+            全機能スライド 4
+          </div>
+        </div>
+      </div>
+      <button
+        class="js-toggle-autoplay carousel-autoplay-button btn btn-secondary mt-2"
+        data-carousel-id="carousel-all-options"
+        aria-label="自動再生停止ボタン"
+      >
+        自動再生 停止/開始
+      </button>
+    </section>
+  </div>
+
+  <!-- 楽天カードフレームワーク Carousel JavaScript -->
+  <script src="https://static.card.jp.rakuten-static.com/card_corp/pc/js/common/framework/5.0.0/slick.min.js"></script>
+  <script src="https://static.card.jp.rakuten-static.com/card_corp/pc/js/common/framework/5.0.0/carousel.min.js"></script>
+</body>
+</html>

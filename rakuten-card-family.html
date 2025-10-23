@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>家族カード - 楽天カード</title>
+  <link rel="stylesheet" href="https://static.card.jp.rakuten-static.com/card_corp/pc/css/common/framework/rakuten-card-framework-4.0.0.min.css">
+  <link rel="stylesheet" href="https://static.card.jp.rakuten-static.com/card_corp/pc/css/common/iconfont/rakuten-card-icon-5.0.0.min.css">
+  
+  <style>
+    :root {
+      --primary-color: #EC0606;
+      --primary-red: #DF0101;
+      --bg-orange: #FBF6F3;
+      --bg-gray: #FAFAFA;
+      --text-gray: #333;
+      --text-light-gray: #686868;
+      --divider-color: #EBEBEB;
+      --border-color: #D1D1D1;
+      --link-color: #006A9E;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Hiragino Kaku Gothic Pro', 'Noto Sans CJK JP', -apple-system, Roboto, Helvetica, sans-serif;
+      color: var(--text-gray);
+      background: #fff;
+    }
+
+    .page-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .hero-section {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 24px 20px 0;
+      background: #fff;
+    }
+
+    .hero-title {
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 1.5;
+      text-align: center;
+      margin: 0 0 8px;
+    }
+
+    .hero-subtitle {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.5;
+      text-align: center;
+      margin: 0 0 40px;
+    }
+
+    .hero-images {
+      width: 100%;
+      max-width: 1044px;
+      display: flex;
+      justify-content: center;
+      gap: 2px;
+      margin-bottom: 40px;
+    }
+
+    .hero-images img {
+      width: 100%;
+      max-width: 348px;
+      height: auto;
+      flex: 1;
+    }
+
+    .hero-description {
+      max-width: 800px;
+      font-size: 16px;
+      line-height: 1.5;
+      text-align: center;
+      margin: 0 0 40px;
+      padding: 0 20px;
+    }
+
+    .divider {
+      width: 100%;
+      max-width: 782px;
+      height: 1px;
+      background: var(--divider-color);
+      margin: 40px 0;
+    }
+
+    .section-title {
+      font-size: 26px;
+      font-weight: 600;
+      line-height: 1.5;
+      text-align: center;
+      margin: 0 0 24px;
+    }
+
+    .section-title-red {
+      color: var(--primary-red);
+    }
+
+    .cta-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 20px;
+      margin-bottom: 80px;
+    }
+
+    .cta-note {
+      font-size: 16px;
+      line-height: 1.5;
+      margin: 0 0 4px;
+    }
+
+    .cta-button {
+      display: inline-flex;
+      padding: 12px 40px;
+      background: var(--primary-color);
+      color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.5;
+      border-radius: 4px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      margin-bottom: 8px;
+    }
+
+    .cta-button:hover {
+      opacity: 0.9;
+    }
+
+    .text-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      color: var(--link-color);
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    .text-link:hover {
+      text-decoration: underline;
+    }
+
+    .accordion-wrapper {
+      width: 100%;
+      max-width: 1048px;
+      padding: 0 20px;
+      margin-bottom: 80px;
+    }
+
+    .basic-accordion {
+      display: flex;
+      align-items: center;
+      padding: 16px 24px;
+      border: 1px solid var(--border-color);
+      background: #fff;
+      cursor: pointer;
+      gap: 40px;
+    }
+
+    .basic-accordion-title {
+      flex: 1;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    .merits-section {
+      width: 100%;
+      background: var(--bg-orange);
+      padding: 80px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .merits-grid {
+      width: 100%;
+      max-width: 1044px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+
+    .merit-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 24px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .merit-icon {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 24px;
+    }
+
+    .merit-number {
+      position: relative;
+      width: 22px;
+      height: 22px;
+      margin-right: 8px;
+    }
+
+    .merit-number-circle {
+      width: 22px;
+      height: 22px;
+      background: var(--primary-red);
+      opacity: 0.8;
+      border-radius: 50%;
+    }
+
+    .merit-number-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .merit-title-wrapper {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 16px;
+      width: 100%;
+    }
+
+    .merit-title {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    .merit-description {
+      font-size: 14px;
+      line-height: 1.5;
+      width: 100%;
+      margin-bottom: 16px;
+    }
+
+    .merit-note {
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--text-light-gray);
+      width: 100%;
+    }
+
+    .merit-link {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: 100%;
+      margin-top: auto;
+    }
+
+    .usage-section {
+      width: 100%;
+      background: #fff;
+      padding: 80px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .usage-grid {
+      width: 100%;
+      max-width: 854px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 32px;
+      margin-bottom: 32px;
+    }
+
+    .usage-card {
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding-left: 24px;
+      gap: 10px;
+      background: var(--bg-gray);
+      border-radius: 8px;
+      min-height: 218px;
+    }
+
+    .usage-number {
+      position: absolute;
+      top: -28px;
+      left: 46px;
+      font-size: 48px;
+      font-weight: 700;
+      color: #B6B6B6;
+    }
+
+    .usage-title {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.5;
+      flex: 1;
+      padding-right: 10px;
+    }
+
+    .usage-title-red {
+      color: var(--primary-red);
+    }
+
+    .usage-image {
+      width: 200px;
+      height: auto;
+    }
+
+    .tips-banner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+      margin: 72px 0 40px;
+    }
+
+    .tips-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    .tips-icon {
+      width: 42px;
+      height: 41px;
+    }
+
+    .campaign-section {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 80px 20px;
+      background: #fff;
+    }
+
+    .campaign-image {
+      max-width: 640px;
+      width: 100%;
+      height: auto;
+      margin-top: 32px;
+    }
+
+    .faq-section {
+      width: 100%;
+      max-width: 873px;
+      padding: 0 20px;
+      margin: 80px 0;
+    }
+
+    .faq-title {
+      font-size: 26px;
+      font-weight: 600;
+      line-height: 1.5;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .faq-item {
+      display: flex;
+      align-items: center;
+      padding: 16px 24px;
+      border: 1px solid #DDD;
+      background: #fff;
+      gap: 16px;
+      margin-bottom: -1px;
+    }
+
+    .faq-item:first-child {
+      border-radius: 8px 8px 0 0;
+    }
+
+    .faq-item:last-child {
+      border-radius: 0 0 8px 8px;
+    }
+
+    .faq-question {
+      display: flex;
+      gap: 8px;
+      flex: 1;
+    }
+
+    .faq-q {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    .contact-section {
+      width: 100%;
+      background: var(--bg-orange);
+      padding: 80px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .contact-card {
+      width: 100%;
+      max-width: 688px;
+      padding: 16px 94px;
+      background: #fff;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 40px;
+    }
+
+    .contact-icon {
+      width: 80px;
+      height: 80px;
+      margin: 16px 0;
+    }
+
+    .contact-name {
+      font-size: 18px;
+      font-weight: 700;
+      text-align: center;
+      margin: 16px 0;
+    }
+
+    .contact-phone {
+      font-size: 22px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 4px;
+    }
+
+    .contact-hours {
+      font-size: 13px;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    .contact-note {
+      font-size: 14px;
+      color: var(--text-light-gray);
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 24px;
+      }
+
+      .hero-subtitle {
+        font-size: 16px;
+      }
+
+      .hero-images {
+        flex-direction: column;
+      }
+
+      .merits-grid,
+      .usage-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-title,
+      .faq-title {
+        font-size: 20px;
+      }
+
+      .contact-card {
+        padding: 16px 24px;
+      }
+    }
+  </style>
+
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="page-container">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <h1 class="hero-title">家族カード</h1>
+      <p class="hero-subtitle">家族で使えばさらに便利でおトク！</p>
+      
+      <div class="hero-images">
+        <img src="https://api.builder.io/api/v1/image/assets/TEMP/8e2d661a6d5d0ba4878ab05989fbb45b58f05a68?width=696" alt="家族カード利用イメージ1">
+        <img src="https://api.builder.io/api/v1/image/assets/TEMP/bf7179491f190197ef8438d841c16e2f931a72df?width=696" alt="家族カード利用イメージ2">
+        <img src="https://api.builder.io/api/v1/image/assets/TEMP/ed2d32a6cf3a31199edb0ab06f555bad7ea82f56?width=696" alt="家族カード利用イメージ3">
+      </div>
+
+      <p class="hero-description">
+        家族カードとは、本カード会員様のカード利用分と<br>
+        まとめて同じ口座から引き落とせるご家族様用のクレジットカードです。<br>
+        また、家族カードご利用分も、本カード会員様同様にポイントが貯まるのでお得です。
+      </p>
+
+      <div class="divider"></div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <h2 class="section-title">家族カードのお申し込み</h2>
+      <p class="cta-note">＼お申し込みは最短60秒～／</p>
+      <a href="#" class="cta-button">お申し込みはこちら</a>
+      <a href="#" class="text-link">
+        まだ本カードをお持ちでない方はこちらをご覧ください
+        <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M6.56247 12.3125L2.62497 12.3125C2.38335 12.3125 2.18747 12.1166 2.18747 11.875L2.18747 7.93746C2.18747 7.69584 2.38335 7.49996 2.62497 7.49996C2.8666 7.49996 3.06247 7.69584 3.06247 7.93746L3.06247 10.8187L5.68099 8.20022C5.85185 8.02937 6.12886 8.02937 6.29971 8.20022C6.47056 8.37108 6.47056 8.64809 6.29971 8.81894L3.68119 11.4375L6.56247 11.4375C6.8041 11.4375 6.99997 11.6333 6.99997 11.875C6.99997 12.1166 6.8041 12.3125 6.56247 12.3125Z" fill="#006A9E"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M7.43753 2.68748L11.375 2.68748C11.6167 2.68748 11.8125 2.88335 11.8125 3.12498L11.8125 7.06248C11.8125 7.3041 11.6167 7.49998 11.375 7.49998C11.1334 7.49998 10.9375 7.3041 10.9375 7.06248L10.9375 4.1812L8.31901 6.79972C8.14815 6.97057 7.87114 6.97057 7.70029 6.79972C7.52944 6.62886 7.52944 6.35185 7.70029 6.181L10.3188 3.56248L7.43753 3.56248C7.1959 3.56248 7.00003 3.3666 7.00003 3.12498C7.00003 2.88335 7.1959 2.68748 7.43753 2.68748Z" fill="#006A9E"/>
+        </svg>
+      </a>
+    </section>
+
+    <!-- Basic Info Accordion -->
+    <div class="accordion-wrapper">
+      <div class="basic-accordion">
+        <div class="basic-accordion-title">家族カードの基本情報</div>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M21.4053 8.65523L20.3448 7.59473L11.6553 16.2842L2.96577 7.59473L1.90527 8.65523L11.6553 18.4052L21.4053 8.65523Z" fill="#686868"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Merits Section -->
+    <section class="merits-section">
+      <h2 class="section-title">家族カード<span class="section-title-red">6</span>つのメリット</h2>
+      
+      <div class="merits-grid">
+        <!-- Merit 1 -->
+        <div class="merit-card">
+          <img src="https://api.builder.io/api/v1/image/assets/TEMP/a6f895830b3c3c12770890a7d639be713f1260b3?width=160" alt="" class="merit-icon">
+          
+          <div class="merit-title-wrapper">
+            <div class="merit-number">
+              <div class="merit-number-circle"></div>
+              <div class="merit-number-text">1</div>
+            </div>
+            <div class="merit-title">本カード同様にポイントが<br>貯まる！※</div>
+          </div>
+          
+          <p class="merit-description">
+            家族カードご利用分も、本カード会員様同様に楽天グループ以外でのご利用分でも、100円につき1ポイントが貯まります。
+          </p>
+          
+          <p class="merit-note">
+            ※ 一部ポイント還元の対象外となる場合がございます。
+          </p>
+          
+          <div class="merit-link">
+            <a href="#" class="text-link">
+              家族カードご利用ポイントの詳細を見る
+              <svg width="6" height="13" viewBox="0 0 6 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.583333 0.5L0 1.14615L4.83333 6.5L0 11.8538L0.583333 12.5L6 6.5L0.583333 0.5Z" fill="#006A9E"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Merit 2 -->
+        <div class="merit-card">
+          <img src="https://api.builder.io/api/v1/image/assets/TEMP/468790bf313ceb4e115b24cd25ce774869d6be22?width=160" alt="" class="merit-icon">
+          
+          <div class="merit-title-wrapper">
+            <div class="merit-number">
+              <div class="merit-number-circle"></div>
+              <div class="merit-number-text">2</div>
+            </div>
+            <div class="merit-title">年会費永年無料！</div>
+          </div>
+          
+          <p class="merit-note">
+            ※ 楽天ゴールドカード、楽天プレミアムカード会員様は550円（税込み）でご利用いただけます。
+          </p>
+        </div>
+
+        <!-- Merit 3 -->
+        <div class="merit-card">
+          <img src="https://api.builder.io/api/v1/image/assets/TEMP/e4fb50528613279e042ef4d873be39208362f616?width=160" alt="" class="merit-icon">
+          
+          <div class="merit-title-wrapper">
+            <div class="merit-number">
+              <div class="merit-number-circle"></div>
+              <div class="merit-number-text">3</div>
+            </div>
+            <div class="merit-title">家計の管理がカンタンに！</div>
+          </div>
+          
+          <p class="merit-description">
+            本カードと家族カードの支出をまとめて管理できます。
+          </p>
+        </div>
+
+        <!-- Merit 4 -->
+        <div class="merit-card">
+          <img src="https://api.builder.io/api/v1/image/assets/TEMP/d52e2307f13253c3c09e58de83ea49efc4f050a1?width=160" alt="" class="merit-icon">
+          
+          <div class="merit-title-wrapper">
+            <div class="merit-number">
+              <div class="merit-number-circle"></div>
+              <div class="merit-number-text">4</div>
+            </div>
+            <div class="merit-title">ご請求はまとめてお引き落とし</div>
+          </div>
+          
+          <p class="merit-description">
+            ご請求は本カード会員様の口座からまとめて引き落としできます。
+          </p>
+          
+          <div class="merit-link">
+            <a href="#" class="text-link">
+              家族カードお支払いの詳細を見る
+              <svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.583333 0L0 0.646154L4.83333 6L0 11.3538L0.583333 12L6 6L0.583333 0Z" fill="#006A9E"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Merit 5 -->
+        <div class="merit-card">
+          <img src="https://api.builder.io/api/v1/image/assets/TEMP/32b0ed40f810c8ef4e32c40c0b09552ebe02813e?width=160" alt="" class="merit-icon">
+          
+          <div class="merit-title-wrapper">
+            <div class="merit-number">
+              <div class="merit-number-circle"></div>
+              <div class="merit-number-text">5</div>
+            </div>
+            <div class="merit-title">家族間でポイントを移行</div>
+          </div>
+          
+          <p class="merit-description">
+            貯めたポイントをあげたり、もらったりすることができます。
+          </p>
+          
+          <div class="merit-link">
+            <a href="#" class="text-link">
+              家族間のポイント移行の詳細を見る
+              <svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.583333 0L0 0.646154L4.83333 6L0 11.3538L0.583333 12L6 6L0.583333 0Z" fill="#006A9E"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Merit 6 -->
+        <div class="merit-card">
+          <img src="https://api.builder.io/api/v1/image/assets/TEMP/0a74b22d91c887cd31e0e21e63a3267385716ed4?width=160" alt="" class="merit-icon">
+          
+          <div class="merit-title-wrapper">
+            <div class="merit-number">
+              <div class="merit-number-circle"></div>
+              <div class="merit-number-text">6</div>
+            </div>
+            <div class="merit-title">家族カードのカード利用<br>お知らせメールが届き安心</div>
+          </div>
+          
+          <p class="merit-description">
+            カードご利用内容をメールでカンタンに確認でき、紛失や盗難の際にも安心です。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Usage Section -->
+    <section class="usage-section">
+      <h2 class="section-title">家族カードの便利な使い方<span class="section-title-red">4</span>選</h2>
+
+      <div class="usage-grid">
+        <!-- Usage 1 -->
+        <div class="usage-card">
+          <div class="usage-number">01</div>
+          <div class="usage-title">
+            楽天市場などでの<br>
+            <span class="usage-title-red">オンライン決済</span>に
+          </div>
+          <img src="https://api.builder.io/api/v1/image/assets/TEMP/b6e57bdbd6cf343748ed0217f372dfc0a84013b5?width=424" alt="" class="usage-image">
+        </div>
+
+        <!-- Usage 2 -->
+        <div class="usage-card">
+          <div class="usage-number">02</div>
+          <div class="usage-title">
+            <span class="usage-title-red">食費</span>や<span class="usage-title-red">家計</span>の管理に
+          </div>
+          <img src="https://api.builder.io/api/v1/image/assets/TEMP/b8c0b8057a76864962e861965f5a9c3c0065ffcb?width=412" alt="" class="usage-image">
+        </div>
+
+        <!-- Usage 3 -->
+        <div class="usage-card">
+          <div class="usage-number">03</div>
+          <div class="usage-title">
+            <span class="usage-title-red">携帯電話の料金</span>の<br>お支払いに
+          </div>
+          <img src="https://api.builder.io/api/v1/image/assets/TEMP/e95ff4750e70d08ce8ff86abb494326687b0f444?width=388" alt="" class="usage-image">
+        </div>
+
+        <!-- Usage 4 -->
+        <div class="usage-card">
+          <div class="usage-number">04</div>
+          <div class="usage-title">
+            お子様の<span class="usage-title-red">留学先</span>や<br>
+            <span class="usage-title-red">上京先</span>での生活費に
+          </div>
+          <img src="https://api.builder.io/api/v1/image/assets/TEMP/2a0c7a96de947d034648c21f3778ecd3e008e077?width=318" alt="" class="usage-image">
+        </div>
+      </div>
+
+      <!-- Tips Banner -->
+      <div class="tips-banner">
+        <div class="tips-title">
+          <img src="https://api.builder.io/api/v1/image/assets/TEMP/0c114c7a8e1e3ee74c135d6dd50cfee63831bd52?width=84" alt="" class="tips-icon">
+          さらに便利な使い方をチェック！
+        </div>
+        <img src="https://api.builder.io/api/v1/image/assets/TEMP/ba9ab6e6467fab3cb2a7c0e0e0bbfe18ef252a14?width=1408" alt="家族カード活用術" style="max-width: 704px; width: 100%; height: auto;">
+        <a href="#" class="text-link">
+          家族カード活用術を見る
+          <svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.583333 0L0 0.646154L4.83333 6L0 11.3538L0.583333 12L6 6L0.583333 0Z" fill="#006A9E"/>
+          </svg>
+        </a>
+      </div>
+
+      <div class="divider" style="margin-top: 40px;"></div>
+    </section>
+
+    <!-- Campaign Section -->
+    <section class="campaign-section">
+      <h2 class="section-title">家族カードのお得なキャンペーン</h2>
+      <img src="https://api.builder.io/api/v1/image/assets/TEMP/8dc64105b3160674a099eabc5c4ad38b4563ad1c?width=1280" alt="キャンペーン" class="campaign-image">
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <h2 class="faq-title">よくあるご質問</h2>
+      
+      <div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <span class="faq-q">Q.</span>
+            <span class="faq-q">家族カードの暗証番号を確認したいのですが、どうすればいいですか？</span>
+          </div>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M22.4053 7.65523L21.3448 6.59473L12.6553 15.2842L3.96577 6.59473L2.90527 7.65523L12.6553 17.4052L22.4053 7.65523Z" fill="#686868"/>
+          </svg>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span class="faq-q">Q.</span>
+            <span class="faq-q">家族カードの利用によって獲得したポイントはどのように進呈されますか？</span>
+          </div>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M22.4053 7.65523L21.3448 6.59473L12.6553 15.2842L3.96577 6.59473L2.90527 7.65523L12.6553 17.4052L22.4053 7.65523Z" fill="#686868"/>
+          </svg>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span class="faq-q">Q.</span>
+            <span class="faq-q">高校生でも作成することはできますか？</span>
+          </div>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M22.4053 7.65523L21.3448 6.59473L12.6553 15.2842L3.96577 6.59473L2.90527 7.65523L12.6553 17.4052L22.4053 7.65523Z" fill="#686868"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+      <h2 class="section-title">お申し込みに関するお問い合わせ先</h2>
+      
+      <div class="contact-card">
+        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="40" cy="40" r="40" fill="#F5F5F5"/>
+          <path d="M40 13C48.284 13 53.3412 16.5091 56.4414 21.7002C58.9962 25.0625 59.7056 28.7591 59.9229 32.0078C59.9808 32.003 60.0391 32 60.0977 32H60.1025C66.1265 32 71.5 37.0746 71.5 43C71.5 48.9254 66.1265 54 60.1025 54H59.9766L59.9248 53.9941C59.8427 53.9856 59.7596 53.9718 59.6758 53.9551C57.6527 60.945 52.7139 65.5575 49.8867 67.6475C49.9596 67.9173 50 68.202 50 68.5C50 71.5542 47.1432 74 43.1426 74H36.8574C32.8568 74 30 71.5542 30 68.5C30 65.4458 32.8568 63 36.8574 63H43.1426C44.1347 63 45.0913 63.3559 45.8037 63.9648C48.5202 62.9687 53.6284 58.1722 54.0039 50.9121L54.0322 50.9141C54.0094 50.6991 54 50.478 54 50.2559V37.7246L54.0283 36.9648L53.9922 36.9639C54.07 33.7817 53.5484 29.5011 50.7705 25.7998C48.0315 22.1576 44.0523 19 40 19C35.9333 19 32.9574 21.0896 30.2256 24.6846C28.4543 28.3389 27.9293 32.6148 28.0078 36.9668L27.9619 36.9678L28 37.7188V50.2559C28 51.9289 27.9241 53.5907 27.5967 54.1104C27.2095 54.7248 26.6141 54.9379 26.0752 54.9941L26.0234 55H25.8975C17.8735 55 12.5 48.9254 12.5 43C12.5 37.0746 17.8735 32 25.8975 32H25.9023C25.9583 32 26.014 32.0024 26.0693 32.0068C26.2763 28.6734 26.9828 24.9412 28.5625 21.5742C31.67 16.4163 36.2735 13 40 13Z" fill="#EC0606"/>
+        </svg>
+        
+        <p class="contact-name">楽天カード株式会社コンタクトセンター</p>
+        
+        <div>
+          <p class="contact-phone">0570-66-6910</p>
+          <p class="contact-hours">(営業時間9:30~17:30)</p>
+        </div>
+        
+        <p class="contact-note">
+          ※上記電話番号がご利用いただけない場合は<strong>092-474-6287</strong>をご利用ください。
+        </p>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

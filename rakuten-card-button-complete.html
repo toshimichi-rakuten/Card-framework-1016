@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>楽天カードフレームワーク - Button完全版</title>
+  <link rel="stylesheet" href="https://static.card.jp.rakuten-static.com/card_corp/pc/css/common/framework/rakuten-card-framework-4.0.0.min.css">
+  <link rel="stylesheet" href="https://static.card.jp.rakuten-static.com/card_corp/pc/css/common/iconfont/rakuten-card-icon-5.0.0.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1>楽天カードフレームワーク - Button</h1>
+
+    <section>
+      <h2>Basic Buttons</h2>
+      <p>基本的なボタンスタイルです。</p>
+
+      <button type="button" class="btn btn-primary">Primary</button>
+      <button type="button" class="btn btn-secondary">Secondary</button>
+      <button type="button" class="btn btn-link">Link</button>
+    </section>
+
+    <section>
+      <h2>Button Tags</h2>
+      <p>.btnクラスは様々なHTML要素で使用できます。aタグの場合はrole="button"が必要です。</p>
+
+      <a class="btn btn-primary" href="#" role="button">Link</a>
+      <button class="btn btn-primary" type="submit">Button</button>
+      <input class="btn btn-primary" type="button" value="Input" />
+      <input class="btn btn-primary" type="submit" value="Submit" />
+      <input class="btn btn-primary" type="reset" value="Reset" />
+    </section>
+
+    <section>
+      <h2>Outline Buttons</h2>
+      <p>.btn-outline-*を適用すると枠線を残してボタンの背景色を透過できます。</p>
+
+      <button type="button" class="btn btn-outline-primary">Primary</button>
+      <button type="button" class="btn btn-outline-secondary">Secondary</button>
+    </section>
+
+    <section>
+      <h2>With Icon</h2>
+      <p>アイコンフォントと組み合わせることができます。</p>
+
+      <button type="button" class="btn btn-primary btn-icon">
+        With Icon<span class="rakuten-card-icon chevron-right"></span>
+      </button>
+      <button type="button" class="btn btn-outline-primary btn-icon">
+        With Icon<span class="rakuten-card-icon chevron-right"></span>
+      </button>
+      <button type="button" class="btn btn-outline-secondary btn-icon text-link">
+        With Icon and Text With Icon and Text<br />With Icon and Text<span
+          class="rakuten-card-icon arrow-down"
+        ></span>
+      </button>
+    </section>
+
+    <section>
+      <h2>Size</h2>
+      <p>様々なサイズのボタンが利用できます。</p>
+
+      <button type="button" class="btn btn-primary btn-large">Large button</button>
+      <button type="button" class="btn btn-primary btn-medium">Medium button</button>
+      <button type="button" class="btn btn-primary">Default button</button>
+      <button type="button" class="btn btn-primary btn-small">Small button</button>
+      <button type="button" class="btn btn-primary btn-xsmall">X-Small button</button>
+    </section>
+
+    <section>
+      <h2>Block</h2>
+      <p>ブロックレベルの幅いっぱいに広がるボタンです。</p>
+
+      <button type="button" class="btn btn-primary btn-block">
+        Block level button
+      </button>
+      <button type="button" class="btn btn-outline-primary btn-block">
+        Block level button
+      </button>
+    </section>
+
+    <section>
+      <h2>Active & Disabled State</h2>
+      <p>data属性やクラスと一緒に使用することでステータスに合わせてスタイルを変更できます。</p>
+
+      <h3>Active State</h3>
+      <a href="#" class="btn btn-primary active" role="button" aria-pressed="true"
+        >Primary active link</a
+      >
+      <button type="button" class="btn btn-primary active">Primary active button</button>
+
+      <h3>Disabled State</h3>
+      <a
+        href="#"
+        class="btn btn-outline-primary disabled"
+        tabindex="-1"
+        role="button"
+        aria-disabled="true"
+        >Primary disabled link</a
+      >
+      <button type="button" class="btn btn-primary" disabled="disabled">
+        Primary disabled button
+      </button>
+      <button type="button" class="btn btn-link disabled">Disabled Link</button>
+    </section>
+
+    <section>
+      <h2>Anchor Button</h2>
+      <p>特別なアンカーボタンスタイルです。</p>
+
+      <a href="#" class="anchor anchor-btn">カテゴリから探す</a>
+    </section>
+
+    <section>
+      <h2>Accessibility Examples</h2>
+      <p>アクセシビリティ要件を満たすボタンの例です。</p>
+
+      <h3>フローティングアンカーボタン</h3>
+      <button type="button" class="btn btn-primary" aria-label="メニューを開く">
+        <span class="rakuten-card-icon menu"></span>
+      </button>
+      <button type="button" class="btn btn-outline-primary" aria-label="検索">
+        <span class="rakuten-card-icon search"></span>
+      </button>
+
+      <h3>状態を表すボタン</h3>
+      <button type="button" class="btn btn-primary" aria-pressed="false">
+        お気に入りに追加
+      </button>
+      <button type="button" class="btn btn-primary active" aria-pressed="true">
+        お気に入り済み
+      </button>
+    </section>
+
+    <section>
+      <h2>All Button Styles Showcase</h2>
+      <p>全てのボタンスタイルの一覧です。</p>
+
+      <div class="mb-3">
+        <h3>Primary Buttons</h3>
+        <button type="button" class="btn btn-primary btn-large">Primary Large</button>
+        <button type="button" class="btn btn-primary btn-medium">Primary Medium</button>
+        <button type="button" class="btn btn-primary">Primary Default</button>
+        <button type="button" class="btn btn-primary btn-small">Primary Small</button>
+        <button type="button" class="btn btn-primary btn-xsmall">Primary X-Small</button>
+      </div>
+
+      <div class="mb-3">
+        <h3>Outline Buttons</h3>
+        <button type="button" class="btn btn-outline-primary btn-large">Outline Large</button>
+        <button type="button" class="btn btn-outline-primary btn-medium">Outline Medium</button>
+        <button type="button" class="btn btn-outline-primary">Outline Default</button>
+        <button type="button" class="btn btn-outline-primary btn-small">Outline Small</button>
+        <button type="button" class="btn btn-outline-primary btn-xsmall">Outline X-Small</button>
+      </div>
+
+      <div class="mb-3">
+        <h3>Icon Buttons</h3>
+        <button type="button" class="btn btn-primary btn-icon">
+          <span class="rakuten-card-icon chevron-left"></span>Back
+        </button>
+        <button type="button" class="btn btn-primary btn-icon">
+          Next<span class="rakuten-card-icon chevron-right"></span>
+        </button>
+        <button type="button" class="btn btn-outline-secondary btn-icon">
+          Download<span class="rakuten-card-icon download"></span>
+        </button>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
