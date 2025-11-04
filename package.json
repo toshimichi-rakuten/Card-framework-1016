@@ -1,0 +1,12 @@
+{
+  "name": "card-framework-1016",
+  "version": "1.0.0",
+  "description": "楽天カードフレームワーク コンポーネントライブラリ",
+  "scripts": {
+    "dev": "npx http-server -p 8080 -o",
+    "build": "echo 'ビルド不要（静的HTMLプロジェクト）'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
